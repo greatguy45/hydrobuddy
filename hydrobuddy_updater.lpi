@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1" Active="Default">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="hydrobuddy_updater"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="88"/>
+        <CursorPos X="54" Y="106"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="D:\lazarus\fpc\2.4.3\units\i386-win32\zlib\zlib.o"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit1>
+    </Units>
+    <JumpHistory Count="17" HistoryIndex="16">
+      <Position1>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="95" Column="26" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="7" Column="30" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="9" Column="64" TopLine="1"/>
+      </Position3>
+      <Position4>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="17" Column="12" TopLine="1"/>
+      </Position4>
+      <Position5>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="9" Column="63" TopLine="1"/>
+      </Position5>
+      <Position6>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="9" Column="48" TopLine="1"/>
+      </Position7>
+      <Position8>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position8>
+      <Position9>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="11" Column="39" TopLine="1"/>
+      </Position9>
+      <Position10>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="9" Column="49" TopLine="1"/>
+      </Position10>
+      <Position11>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="11" Column="47" TopLine="1"/>
+      </Position11>
+      <Position12>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="9" Column="38" TopLine="1"/>
+      </Position12>
+      <Position13>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position13>
+      <Position14>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="118" Column="24" TopLine="98"/>
+      </Position14>
+      <Position15>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="122" Column="24" TopLine="103"/>
+      </Position15>
+      <Position16>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="103" Column="44" TopLine="89"/>
+      </Position16>
+      <Position17>
+        <Filename Value="hydrobuddy_updater.lpr"/>
+        <Caret Line="108" Column="19" TopLine="91"/>
+      </Position17>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="hydrobuddy_updater"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Other>
+      <CompilerMessages>
+        <UseMsgFile Value="True"/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

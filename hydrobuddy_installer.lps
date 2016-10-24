@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="hydrobuddy_installer.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="hydrobuddy_installer"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2"/>
+        <CursorPos X="11" Y="15"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="hb_installer_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="hb_installer_main"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="61"/>
+        <CursorPos X="33" Y="138"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="hb_install.rc"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="44" Y="1"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit2>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="20" HistoryIndex="19">
+      <Position1>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="69" Column="76" TopLine="43"/>
+      </Position1>
+      <Position2>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="60" Column="22" TopLine="47"/>
+      </Position2>
+      <Position3>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="61" Column="22" TopLine="48"/>
+      </Position3>
+      <Position4>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="62" Column="22" TopLine="49"/>
+      </Position4>
+      <Position5>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="63" Column="22" TopLine="50"/>
+      </Position5>
+      <Position6>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="64" Column="22" TopLine="51"/>
+      </Position6>
+      <Position7>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="66" Column="22" TopLine="53"/>
+      </Position7>
+      <Position8>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="81" Column="39" TopLine="61"/>
+      </Position8>
+      <Position9>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="118" Column="39" TopLine="105"/>
+      </Position9>
+      <Position10>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="119" Column="39" TopLine="106"/>
+      </Position10>
+      <Position11>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="118" Column="39" TopLine="105"/>
+      </Position11>
+      <Position12>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="119" Column="39" TopLine="106"/>
+      </Position12>
+      <Position13>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="120" Column="39" TopLine="107"/>
+      </Position13>
+      <Position14>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="121" Column="39" TopLine="108"/>
+      </Position14>
+      <Position15>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="122" Column="39" TopLine="109"/>
+      </Position15>
+      <Position16>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="123" Column="39" TopLine="110"/>
+      </Position16>
+      <Position17>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="93" Column="62" TopLine="79"/>
+      </Position17>
+      <Position18>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="55" Column="18" TopLine="40"/>
+      </Position18>
+      <Position19>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="140" Column="19" TopLine="122"/>
+      </Position19>
+      <Position20>
+        <Filename Value="hb_installer_main.pas"/>
+        <Caret Line="2" Column="34" TopLine="1"/>
+      </Position20>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
