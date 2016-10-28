@@ -159,7 +159,8 @@ MyDbf.Close ;
 
 MyDbf.Free ;
 
-Form1.UpdateList ;
+//Form1.UpdateList ;
+Form1.UpdateSaltList;
 
 if currentValP = 1  then
 ShowMessage('P will be converted and saved as P%, to see P2O5 again in the future simply select it from the dropbox for automatic conversion');
@@ -264,7 +265,8 @@ ComboBox2.ItemIndex := 0 ;
 
 ComboBox3.ItemIndex := 0 ;
 
-HB_Main.Form1.UpdateList ;
+//HB_Main.Form1.UpdateList ;
+Form1.UpdateSaltList;
 
 Form3.Visible := False ;
 
@@ -376,4 +378,4 @@ initialization
   {$I hb_newcustomsalt.lrs}
 
 end.
-
+

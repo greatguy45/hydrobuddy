@@ -13,17 +13,6 @@ type
   { TForm2 }
 
   TForm2 = class(TForm)
-    Button1: TBitBtn;
-    Button2: TBitBtn;
-    Button3: TBitBtn;
-    Button4: TBitBtn;
-    Button5: TBitBtn;
-    Button6: TBitBtn;
-    Button7: TBitBtn;
-    Label1: TLabel;
-    Label2: TLabel;
-    ListBox1: TListBox;
-    ListBox2: TListBox;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);

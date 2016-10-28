@@ -7,17 +7,16 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ComCtrls, StdCtrls, Menus, ExtCtrls, Buttons, Grids, TAGraph, TASeries,
-  hb_load_salts, Dbf, DB, Math, densesolver, hb_commercialnutrient,
+  Dbf, DB, Math, densesolver, hb_commercialnutrient,
   hb_waterquality, hb_addweight, hb_insprecision, hb_stockanalysis,
   hb_persubstance, hb_datasetname, hb_analysis, descriptivestatistics,
-  hb_freedom, dbf_fields, hb_ratios,LCLIntf, types;
+  hb_freedom, dbf_fields, hb_ratios,LCLIntf, types,hb_newcustomsalt;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
-    Button1:    TButton;
     Button10:   TButton;
     Button11:   TButton;
     Button12: TBitBtn;
@@ -28,14 +27,13 @@ type
     Button17:   TButton;
     Button18:   TButton;
     Button19:   TButton;
-    Button2: TBitBtn;
+    Btn_Calculate: TBitBtn;
     Button20: TButton;
     Button21: TButton;
-    Button22: TButton;
+    Btn_ChooseDegreeofFreedom: TButton;
     Button23: TButton;
     Button24: TButton;
     Button25: TButton;
-    Button26: TBitBtn;
     BtnAddRawSaltForCalc: TBitBtn;
     BtnRemoveSaltFromCalc: TBitBtn;
     Button29: TBitBtn;
@@ -44,12 +42,12 @@ type
     Button31: TBitBtn;
     Button32: TBitBtn;
     Button33: TBitBtn;
-    Button4:    TButton;
+    Btn_SaveFormulaToDB:    TButton;
     Button5:    TButton;
-    Button6:    TButton;
-    Button7:    TButton;
-    Button8:    TButton;
-    Button9:    TButton;
+    Btn_DeleteFormulaFromDB:    TButton;
+    Btn_AddCommFormula:    TButton;
+    Btn_SetWtrQuality:    TButton;
+    Btn_SetInstrPrecision:    TButton;
     Chart1: TChart;
     Chart1LineSeries1: TLineSeries;
     Chart1LineSeries2: TLineSeries;
@@ -57,7 +55,7 @@ type
     Chart1LineSeries4: TLineSeries;
     CheckBox1:  TCheckBox;
     CheckBox2: TCheckBox;
-    CheckBox3: TCheckBox;
+    ChkBox_DisablePopUp: TCheckBox;
     CheckBox4: TCheckBox;
     CheckBox5: TCheckBox;
     CheckBox6: TCheckBox;
@@ -76,10 +74,9 @@ type
     Edit21:     TEdit;
     Edit22:     TEdit;
     Edit23:     TEdit;
-    Edit25:     TEdit;
     Edit19:     TEdit;
     Edit15:     TEdit;
-    Edit17:     TEdit;
+    TxtBox_ConcFactor:     TEdit;
     Edit2:      TEdit;
     Edit3:      TEdit;
     Edit4:      TEdit;
@@ -115,32 +112,33 @@ type
     Label25: TLabel;
     Label26: TLabel;
     Label27: TLabel;
-    Label28: TLabel;
+    Lbl_FormulaName: TLabel;
+    Lbl_Err_NO3: TLabel;
     Label29:    TLabel;
     Label30:    TLabel;
     Label31:    TLabel;
     Label32:    TLabel;
     Label36: TLabel;
     Label39: TLabel;
-    Label40: TLabel;
-    Label41: TLabel;
-    Label42: TLabel;
-    Label43: TLabel;
-    Label44: TLabel;
+    Lbl_Err_NH: TLabel;
+    Lbl_Err_P: TLabel;
+    Lbl_Err_K: TLabel;
+    Lbl_Err_Ca: TLabel;
+    Lbl_Err_Mg: TLabel;
     Label45:    TLabel;
     Label46:    TLabel;
-    Label47: TLabel;
-    Label48: TLabel;
-    Label49: TLabel;
+    Lbl_Err_Fe: TLabel;
+    Lbl_Err_S: TLabel;
+    Lbl_Err_B: TLabel;
     Label50: TLabel;
     Label51: TLabel;
-    Label52: TLabel;
-    Label53: TLabel;
-    Label54: TLabel;
-    Label56: TLabel;
-    Label57: TLabel;
-    Label58: TLabel;
-    Label59: TLabel;
+    Lbl_Err_Zn: TLabel;
+    Lbl_Err_Mn: TLabel;
+    Lbl_Err_Cu: TLabel;
+    Lbl_Err_Mo: TLabel;
+    Lbl_Err_Na: TLabel;
+    Lbl_Err_Si: TLabel;
+    Lbl_Err_Cl: TLabel;
     LabelVersion: TLabel;
     Label55:    TLabel;
     Label17:    TLabel;
@@ -199,8 +197,8 @@ type
     RadioButton3: TRadioButton;
     RadioButton4: TRadioButton;
     RadioButton5: TRadioButton;
-    RadioButton6: TRadioButton;
-    RadioButton7: TRadioButton;
+    RadBtn_ABSolution: TRadioButton;
+    RadBtn_DirectAddition: TRadioButton;
     SaveDialog1: TSaveDialog;
     SelectDirectoryDialog1: TSelectDirectoryDialog;
     StringGrid1: TStringGrid;
@@ -232,37 +230,42 @@ type
     procedure Button17Click(Sender: TObject);
     procedure Button18Click(Sender: TObject);
     procedure Button19Click(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    //procedure Button1Click(Sender: TObject);
     procedure Button20Click(Sender: TObject);
     procedure Button21Click(Sender: TObject);
-    procedure Button22Click(Sender: TObject);
+    procedure Btn_ChooseDegreeofFreedomClick(Sender: TObject);
     procedure Button23Click(Sender: TObject);
     procedure Button24Click(Sender: TObject);
     procedure Button25Click(Sender: TObject);
     procedure Button26Click(Sender: TObject);
     procedure BtnAddRawSaltForCalcClick(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure Button29Click(Sender: TObject);
+    procedure Btn_CalculateClick(Sender: TObject);
+    procedure Button30Click(Sender: TObject);
+    procedure Button31Click(Sender: TObject);
+    procedure Button32Click(Sender: TObject);
+    procedure Button33Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
-    procedure Button4Resize(Sender: TObject);
+    procedure Btn_SaveFormulaToDBClick(Sender: TObject);
+    procedure Btn_SaveFormulaToDBResize(Sender: TObject);
     procedure Button5Click(Sender: TObject);
-    procedure Button6Click(Sender: TObject);
-    procedure Button7Click(Sender: TObject);
-    procedure Button8Click(Sender: TObject);
-    procedure Button9Click(Sender: TObject);
+    procedure Btn_DeleteFormulaFromDBClick(Sender: TObject);
+    procedure Btn_AddCommFormulaClick(Sender: TObject);
+    procedure Btn_SetWtrQualityClick(Sender: TObject);
+    procedure Btn_SetInstrPrecisionClick(Sender: TObject);
     procedure CheckBox1Change(Sender: TObject);
     procedure CheckBox2Change(Sender: TObject);
-    procedure CheckBox3Change(Sender: TObject);
+    procedure ChkBox_DisablePopUpChange(Sender: TObject);
     procedure CheckBox4Change(Sender: TObject);
     procedure CheckBox5Change(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
     procedure ComboBox2Change(Sender: TObject);
     procedure Edit25Change(Sender: TObject);
     procedure FormWindowStateChange(Sender: TObject);
-    procedure ListBox1Click(Sender: TObject);
     procedure ListBox1SelectionChange(Sender: TObject; User: boolean);
     procedure ListBox2SelectionChange(Sender: TObject; User: boolean);
     procedure MenuItem2Click(Sender: TObject);
+    procedure PageControl1Change(Sender: TObject);
     procedure RadioButton10Change(Sender: TObject);
     procedure RadioButton11Change(Sender: TObject);
     procedure RadioButton12Change(Sender: TObject);
@@ -272,8 +275,8 @@ type
     procedure RadioButton3Change(Sender: TObject);
     procedure RadioButton4Change(Sender: TObject);
     procedure RadioButton5Change(Sender: TObject);
-    procedure RadioButton6Change(Sender: TObject);
-    procedure RadioButton7Change(Sender: TObject);
+    procedure RadBtn_ABSolutionChange(Sender: TObject);
+    procedure RadBtn_DirectAdditionChange(Sender: TObject);
     procedure RadioButton8Change(Sender: TObject);
     procedure RadioButton9Change(Sender: TObject);
     procedure BtnRemoveSaltFromCalcClick(Sender: TObject);
@@ -288,7 +291,7 @@ type
   public
     { public declarations }
     procedure weightFineTunning;
-    procedure UpdateList;
+    procedure UpdateSaltList;
     procedure UpdateComboBox;
     procedure UpdateComboBox2;
     procedure setinivalues ;
@@ -388,15 +391,15 @@ begin
   round2 := round(Number * t) / t;
 end;
 
-procedure TForm1.UpdateList;
+procedure TForm1.UpdateSaltList;
 var
   MyDbf: TDbf;
   i:     integer;
   j:     integer;
 begin
 
-  Form2.ListBox1.Items.Clear;
-  Form2.ListBox2.Items.Clear;
+  Form1.ListBox1.Items.Clear;
+  Form1.ListBox2.Items.Clear;
 
   MyDbf := TDbf.Create(nil);
   MyDbf.FilePathFull := '';
@@ -408,8 +411,7 @@ begin
 
   while not MyDbf.EOF do
   begin
-    hb_load_salts.Form2.ListBox1.Items.Add(MyDbf.FieldByName('Name').AsString);
-    ListBox1.Items.Add(MyDbf.FieldByName('Name').AsString);
+    Form1.ListBox1.Items.Add(MyDbf.FieldByName('Name').AsString);
 
     MyDbf.Next;                                     // use .next here NOT .findnext!
   end;
@@ -426,7 +428,7 @@ begin
 
   while not MyDbf.EOF do
   begin
-    hb_load_salts.Form2.ListBox2.Items.Add(MyDbf.FieldByName('Name').AsString);
+    Form1.ListBox2.Items.Add(MyDbf.FieldByName('Name').AsString);
     MyDbf.Next;                                     // use .next here NOT .findnext!
   end;
 
@@ -434,20 +436,20 @@ begin
 
   MyDbf.Free;
 
-  for i := 0 to Form2.ListBox2.Items.Count - 1 do
+  for i := 0 to Form1.ListBox2.Items.Count - 1 do
 
   begin
 
     j := 0;
 
-    while j <= Form2.ListBox1.Items.Count - 1 do
+    while j <= Form1.ListBox1.Items.Count - 1 do
 
     begin
 
-      if (Form2.ListBox1.Items[j] = Form2.ListBox2.Items[i]) then
+      if (Form1.ListBox1.Items[j] = Form1.ListBox2.Items[i]) then
 
       begin
-        Form2.ListBox1.Items.Delete(j);
+        Form1.ListBox1.Items.Delete(j);
         j := j + 1;
       end;
 
@@ -459,19 +461,20 @@ begin
 
 
   // sort listboxes
-  hb_load_salts.Form2.ListBox2.Sorted := true ;
-  hb_load_salts.Form2.ListBox1.Sorted := true ;
+  Form1.ListBox2.Sorted := true ;
+  Form1.ListBox1.Sorted := true ;
 
 end;
 
+{
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 
-  UpdateList;
+  UpdateSaltList;
 
   Form2.Visible := True;
 end;
-
+ }
 procedure TForm1.Button20Click(Sender: TObject);
 var
 i : integer ;
@@ -593,7 +596,7 @@ begin
 
 end;
 
-procedure TForm1.Button22Click(Sender: TObject);
+procedure TForm1.Btn_ChooseDegreeofFreedomClick(Sender: TObject);
 begin
   hb_freedom.Form12.Visible := true ;;
 end;
@@ -851,6 +854,28 @@ ListBox2.Items.Add(name1);
 
 end;
 
+procedure TForm1.Button29Click(Sender: TObject);
+begin
+
+  hb_newcustomsalt.Form3.ComboBox1.ItemIndex := 0;
+
+  hb_newcustomsalt.Form3.ComboBox2.ItemIndex := 0 ;
+
+  hb_newcustomsalt.Form3.ComboBox3.ItemIndex := 0 ;
+
+  hb_newcustomsalt.Form3.CheckBox2.Checked := false;
+
+  hb_newcustomsalt.Form3.Edit22.Visible := false;
+
+  hb_newcustomsalt.Form3.Label22.Visible := false ;
+
+  hb_newcustomsalt.Form3.Button1.Enabled := True ;
+
+  hb_newcustomsalt.Form3.Button2.Enabled := False ;
+
+  hb_newcustomsalt.Form3.Visible := true ;
+end;
+
 procedure TForm1.weightFineTunning;
 var
   MyDbf:  TDbf;
@@ -963,9 +988,9 @@ begin
 
   // update list to get matrix size from used substances
 
-  UpdateList;
+  UpdateSaltList;
 
-  arraysize := Form2.ListBox2.Items.Count;
+  arraysize := Form1.ListBox2.Items.Count;
 
   // define volume taking into account radio box setting for units
   // the end input volume is always converted to cubic meters
@@ -983,10 +1008,10 @@ begin
     Volume := Volume * 3.78541178 / 1000;
 
   // correct volume if using concentrated solutions.
-  if RadioButton6.Checked then
-  Volume := Volume * StrToFloat(Edit17.Text);
+  if RadBtn_ABSolution.Checked then
+  Volume := Volume * StrToFloat(TxtBox_ConcFactor.Text);
 
-  array_size := Form2.ListBox2.Items.Count;
+  array_size := Form1.ListBox2.Items.Count;
 
   varcount := 0;
 
@@ -1112,7 +1137,7 @@ if RadioButton13.Checked then
       weight := StrToFloat(StringGrid2.Cells[2, i]);
       nameToCompare := StringGrid2.Cells[0, i] ;
 
-      If RadioButton6.Checked then
+      If RadBtn_ABSolution.Checked then
       nameToCompare := Copy(nameToCompare, 5, Length(nameToCompare));
 
       if nameSubstance = nameToCompare then
@@ -1134,10 +1159,10 @@ if RadioButton13.Checked then
 
         begin
 
-        if (StringGrid2.Cells[0, i][1] = 'A') and (RadioButton6.Checked) then
+        if (StringGrid2.Cells[0, i][1] = 'A') and (RadBtn_ABSolution.Checked) then
         elementInSolutionA[j] := Result[j] + elementInSolutionA[j] ;
 
-        if (StringGrid2.Cells[0, i][1] = 'B') and (RadioButton6.Checked) then
+        if (StringGrid2.Cells[0, i][1] = 'B') and (RadBtn_ABSolution.Checked) then
         elementInSolutionB[j] := Result[j] + elementInSolutionB[j] ;
 
           upper := ((StrToFloat(StringGrid2.Cells[2, i])+weight_error)) /
@@ -1145,12 +1170,12 @@ if RadioButton13.Checked then
           lower := ((StrToFloat(StringGrid2.Cells[2, i])-weight_error)) /
             (Volume + volume_error) ;
 
-          if (RadioButton7.Checked = true) and (all_element_targets[j] <> 0) then
+          if (RadBtn_DirectAddition.Checked = true) and (all_element_targets[j] <> 0) then
           instrumentalError[j] := ((upper - lower) * (100 / all_element_targets[j])) / 2 + instrumentalError[j];
 
-          if (RadioButton6.Checked = true) and (all_element_targets[j] <> 0) then
+          if (RadBtn_ABSolution.Checked = true) and (all_element_targets[j] <> 0) then
           instrumentalError[j] := ((upper - lower) * (100 / all_element_targets[j])) /
-          (2 * StrtoFloat(Edit17.Text)) + instrumentalError[j];
+          (2 * StrtoFloat(TxtBox_ConcFactor.Text)) + instrumentalError[j];
 
           hb_persubstance.Form9.StringGrid1.RowCount := hb_persubstance.Form9.StringGrid1.RowCount + 1 ;
 
@@ -1305,13 +1330,13 @@ if RadioButton13.Checked then
 
   // stock solution analysis
 
-  if (RadioButton6.Checked) then
+  if (RadBtn_ABSolution.Checked) then
   begin
 
   for i := 0 to 15 do
   begin
 
-        elementInSolutionA[i] := elementInSolutionA[i] * StrtoFloat(Edit17.Text) * 100 / ((Volume/StrtoFloat(Edit17.Text)) * 1000000);
+        elementInSolutionA[i] := elementInSolutionA[i] * StrtoFloat(TxtBox_ConcFactor.Text) * 100 / ((Volume/StrtoFloat(TxtBox_ConcFactor.Text)) * 1000000);
 
         if (varnames[i] <> 'P') and (varnames[i] <> 'K') then
 
@@ -1343,7 +1368,7 @@ if RadioButton13.Checked then
   for i := 0 to 15 do
   begin
 
-        elementInSolutionB[i] := elementInSolutionB[i] * StrtoFloat(Edit17.Text) * 100 / ((Volume/StrtoFloat(Edit17.Text)) * 1000000);
+        elementInSolutionB[i] := elementInSolutionB[i] * StrtoFloat(TxtBox_ConcFactor.Text) * 100 / ((Volume/StrtoFloat(TxtBox_ConcFactor.Text)) * 1000000);
 
         if (varnames[i] <> 'P') and (varnames[i] <> 'K') then
 
@@ -1411,7 +1436,7 @@ begin
 
     used_string := StringGrid2.Cells[0,i] ;
 
-    if RadioButton6.checked then
+    if RadBtn_ABSolution.checked then
     delete (used_string,1,4);
 
 
@@ -1424,8 +1449,8 @@ begin
 
       MyDbf.FieldByName('Weight').AsFloat := StrtoFloat(StringGrid2.Cells[2,i]);
 
-      if RadioButton6.checked then
-      MyDbf.FieldByName('Weight').AsFloat := StrtoFloat(StringGrid2.Cells[2,i])/StrToFloat(Edit17.Text);
+      if RadBtn_ABSolution.checked then
+      MyDbf.FieldByName('Weight').AsFloat := StrtoFloat(StringGrid2.Cells[2,i])/StrToFloat(TxtBox_ConcFactor.Text);
 
       MyDbf.Post;
 
@@ -2061,7 +2086,7 @@ Result := FloatToStr(ratio[0]) + ': ' + FloatToStr(ratio[1]) + ': ' + FloatToStr
 
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TForm1.Btn_CalculateClick(Sender: TObject);
 var
   MyDbf:  TDbf;
   i:      integer;
@@ -2126,6 +2151,9 @@ begin
   hb_persubstance.Form9.StringGrid1.RowCount := 1 ;
   hb_stockanalysis.Form8.StringGrid1.Clean ;
 
+  //clear notebox from previous message
+  Form1.Memo1.Lines.Clear;
+
   // EC parameters
 
   SetLength(ec_contribution, 16);
@@ -2184,9 +2212,9 @@ begin
 
   // update list to get matrix size from used substances
 
-  UpdateList;
+  Form1.UpdateSaltList;
 
-  arraysize := Form2.ListBox2.Items.Count;
+  arraysize := Form1.ListBox2.Items.Count;
 
   // define volume taking into account radio box setting for units
   // the end input volume is always converted to cubic meters
@@ -2203,7 +2231,7 @@ begin
   if Radiobutton2.Checked then
     Volume := Volume * 3.78541178 / 1000;
 
-  array_size := Form2.ListBox2.Items.Count;
+  array_size := Form1.ListBox2.Items.Count;
 
   varcount := 0;
 
@@ -2397,13 +2425,17 @@ if RadioButton13.Checked then
        IsLiquid[0][i] := MyDbf.FieldByName('IsLiquid').AsFloat ;
        IsLiquid[1][i] := MyDbf.FieldByName('Density').AsFloat ;
 
-       if (preloaded_weight[i] > 0) and (CheckBox3.Checked = false) then
+       if (preloaded_weight[i] > 0)  then
        begin
+            Form1.Memo1.Lines.Add('You have selected a fixed weight for ' + MyDbf.FieldByName('Name').AsString + '. The program will find a solution with this constraint but it will add more of this substance if it leads to a better solution');
 
-            ShowMessage('You have selected a fixed weight for ' + MyDbf.FieldByName('Name').AsString + '. The program will find a solution with this constraint but it will add more of this substance if it leads to a better solution');
+            {if (ChkBox_DisablePopUp.Checked = false) then
+            begin
+                 ShowMessage('You have selected a fixed weight for ' + MyDbf.FieldByName('Name').AsString + '. The program will find a solution with this constraint but it will add more of this substance if it leads to a better solution');
+            end; }
 
-            if RadioButton6.Checked then
-            preloaded_weight[i] := preloaded_weight[i]/StrToInt(Edit17.Text);
+            if RadBtn_ABSolution.Checked then
+            preloaded_weight[i] := preloaded_weight[i]/StrToInt(TxtBox_ConcFactor.Text);
 
        end;
 
@@ -2548,7 +2580,7 @@ if RadioButton13.Checked then
       name_array[i][1] := MyDbf.FieldByName('Formula').AsString;
 
       // if conditional for when A+B solutions are needed
-      if Radiobutton6.Checked then
+      if RadBtn_ABSolution.Checked then
 
       begin
 
@@ -2558,7 +2590,7 @@ if RadioButton13.Checked then
 
         begin
 
-          ShowMessage('Substance ' + name_array[i][0] +
+          Form1.Memo1.Lines.Add('Substance ' + name_array[i][0] +
             ' is incompatible with concentrated solutions');
           Exit;
 
@@ -2616,9 +2648,9 @@ if RadioButton13.Checked then
 
       begin
 
-        ShowMessage(
-          'Error: There must be at least ONE substance containing each element for which a non-zero concentration is desired');
-        ShowMessage('No substance is providing ' + varnames[i]);
+        //ShowMessage(
+        //  'Error: There must be at least ONE substance containing each element for which a non-zero concentration is desired. No substance is providing ' + varnames[i]);
+        Form1.Memo1.Lines.Add('Error: No substance is providing ' + varnames[i]);
         Exit;
 
       end;
@@ -2673,12 +2705,12 @@ if RadioButton13.Checked then
 
       Result[i] := test;
 
-      if (RadioButton7.Checked = true) and (all_element_targets[i] <> 0) then
+      if (RadBtn_DirectAddition.Checked = true) and (all_element_targets[i] <> 0) then
         instrumental_error[i] := ((upper - lower) * (100 / all_element_targets[i])) / 2;
 
-      if (RadioButton6.Checked = true) and (all_element_targets[i] <> 0) then
+      if (RadBtn_ABSolution.Checked = true) and (all_element_targets[i] <> 0) then
         instrumental_error[i] := ((upper - lower) * (100 / all_element_targets[i])) /
-          (2 * StrtoFloat(Edit17.Text));
+          (2 * StrtoFloat(TxtBox_ConcFactor.Text));
 
       if all_element_targets[i] <> 0 then
       gross_error[i] := (test * 100 / all_element_targets[i]) - 100;
@@ -2705,8 +2737,8 @@ if RadioButton13.Checked then
 
            begin
 
-           ShowMessage(name_array[i][0] + ' is not used within the final result. Please remove it to obtain a better solution');
-
+           //ShowMessage(name_array[i][0] + ' is not used within the final result. Please remove it to obtain a better solution');
+           Form1.Memo1.Lines.Add(name_array[i][0] + ' is not used within the final result.');
            end;
 
     end;
@@ -2738,7 +2770,7 @@ if RadioButton13.Checked then
 
         // list additions for "direct addition" calculation type
 
-        if RadioButton6.Checked = False then
+        if RadBtn_ABSolution.Checked = False then
         begin
 
           StringGrid2.Cells[0,i+1] := (name_array[i][0]);
@@ -2768,7 +2800,7 @@ if RadioButton13.Checked then
 
         // List additions for A+B calculations
 
-        if RadioButton6.Checked = True then
+        if RadBtn_ABSolution.Checked = True then
 
         begin
 
@@ -2778,24 +2810,24 @@ if RadioButton13.Checked then
              (CheckBox6.Checked = false) then
 
           StringGrid2.Cells[2,i+1] :=(FloatToStr(
-            round2(solutions[i] * StrtoFloat(Edit17.Text) * weight_factor +preloaded_weight[i]* weight_factor*StrtoFloat(Edit17.Text), 3)));
+            round2(solutions[i] * StrtoFloat(TxtBox_ConcFactor.Text) * weight_factor +preloaded_weight[i]* weight_factor*StrtoFloat(TxtBox_ConcFactor.Text), 3)));
 
            if (IsLiquid[0,i] = 1)         and
              (CheckBox6.Checked)         then
 
              begin
 
-           StringGrid2.Cells[2,i+1] :=(FloatToStr(round2((1/IsLiquid[1,i])*StrtoFloat(Edit17.Text)*solutions[i] * weight_factor+ preloaded_weight[i] * weight_factor, 3))+ ' mL');
+           StringGrid2.Cells[2,i+1] :=(FloatToStr(round2((1/IsLiquid[1,i])*StrtoFloat(TxtBox_ConcFactor.Text)*solutions[i] * weight_factor+ preloaded_weight[i] * weight_factor, 3))+ ' mL');
 
              end;
 
           StringGrid2.Cells[3,i+1] :=(FloatToStr(
-            round2(0.001 * solutions[i] * cost[i] * StrtoFloat(Edit17.Text)+0.001*preloaded_weight[i] * cost[i]*StrtoFloat(Edit17.Text), 1)));
+            round2(0.001 * solutions[i] * cost[i] * StrtoFloat(TxtBox_ConcFactor.Text)+0.001*preloaded_weight[i] * cost[i]*StrtoFloat(TxtBox_ConcFactor.Text), 1)));
 
           Label20.Caption := 'Values calculated for the preparation of ' +
             Edit19.Text + ' ' + volumeunit + ' of A and ' + Edit19.Text + ' ' +
             volumeunit + ' of B solution. Please use ' +
-            FloatToStr(round2(1000 / StrtoFloat(Edit17.Text), 3)) +
+            FloatToStr(round2(1000 / StrtoFloat(TxtBox_ConcFactor.Text), 3)) +
             'mL of A and B within every Liter of final solution';
 
         end;
@@ -2821,7 +2853,7 @@ if RadioButton13.Checked then
 
         // list additions for "direct addition" calculation type
 
-        if RadioButton6.Checked = False then
+        if RadBtn_ABSolution.Checked = False then
         begin
 
           StringGrid2.Cells[0,i+1] := (name_array[i][0]);
@@ -2835,22 +2867,22 @@ if RadioButton13.Checked then
 
         // List additions for A+B calculations
 
-        if RadioButton6.Checked = True then
+        if RadBtn_ABSolution.Checked = True then
 
         begin
 
           StringGrid2.Cells[0,i+1] :=(ConcTypeArray[i] + ' - ' + name_array[i][0]);
 
           StringGrid2.Cells[2,i+1] :=(FloatToStr(
-            round2(preloaded_weight[i]*StrtoFloat(Edit17.Text), 3)));
+            round2(preloaded_weight[i]*StrtoFloat(TxtBox_ConcFactor.Text), 3)));
 
           StringGrid2.Cells[3,i+1] :=(FloatToStr(
-            round2(0.001*preloaded_weight[i] * cost[i]*StrtoFloat(Edit17.Text), 1)));
+            round2(0.001*preloaded_weight[i] * cost[i]*StrtoFloat(TxtBox_ConcFactor.Text), 1)));
 
           Label20.Caption := 'Values calculated for the preparation of ' +
             Edit19.Text + ' ' + volumeunit + ' of A and ' + Edit19.Text + ' ' +
             volumeunit + ' of B solution. Please use ' +
-            FloatToStr(round2(1000 / StrtoFloat(Edit17.Text), 3)) +
+            FloatToStr(round2(1000 / StrtoFloat(TxtBox_ConcFactor.Text), 3)) +
             'mL of A and B within every Liter of final solution';
 
         end;
@@ -2881,10 +2913,10 @@ if RadioButton13.Checked then
       StringGrid1.Cells[3,i+1] :=('+/- ' + FloatToStr(round2(instrumental_error[i], 1)) + '%');
 
       if prev_conc = 'ppm' then
-      (FindComponent('RLabel' + IntToStr(i+1)) as TLabel).Caption := FloattoStr(round2((1/conc_factor[i])*Result[i] + test, 3)) ;
+      (FindComponent('RLabel' + IntToStr(i+1)) as TLabel).Caption := Format('%*.*f', [0, 2, round2((1/conc_factor[i])*Result[i] + test, 3) ]);
 
       if prev_conc <> 'ppm' then
-      (FindComponent('RLabel' + IntToStr(i+1)) as TLabel).Caption := FloattoStrF((1/conc_factor[i])*Result[i] + test, ffExponent, 4, 2) ;
+      (FindComponent('RLabel' + IntToStr(i+1)) as TLabel).Caption := Format('%*.*f', [0, 2, FloattoStrF((1/conc_factor[i])*Result[i] + test, ffExponent, 4, 2) ]);
 
       if (prev_conc = 'ppm') and (i=12) and (ComboBox3.ItemIndex = 1) then
       (FindComponent('RLabel' + IntToStr(i+1)) as TLabel).Caption := FloattoStr(round2((1/0.4684)*(1/conc_factor[i])*Result[i] + test, 3)) ;
@@ -2901,7 +2933,7 @@ if RadioButton13.Checked then
     // check magnitude of instrumental and gross error
 
        // check for popup disabling
-    if CheckBox3.Checked = false then
+    if ChkBox_DisablePopUp.Checked = false then
 
     begin
 
@@ -2909,17 +2941,46 @@ if RadioButton13.Checked then
 
     begin
 
+    writeln(all_element_names[i] + ' ' + FloatToStr(gross_error[i]) ) ;
+
+
       if (instrumental_error[i] > 100) then
-        ShowMessage('Instrumental error is too high on ' + all_element_names[i] +
+      begin
+        {ShowMessage('Instrumental error is too high on ' + all_element_names[i] +
+          ', prepare more solution volume or a more concentrated solution to reduce this error');   }
+        Form1.Memo1.Lines.Add('Instrumental error is too high on ' + all_element_names[i] +
           ', prepare more solution volume or a more concentrated solution to reduce this error');
+      end;
 
       if (gross_error[i] > 100) then
-        ShowMessage('Gross errors on ' + all_element_names[i] +
+      begin
+        {ShowMessage('Gross errors on ' + all_element_names[i] +
+          ' are too high, probably an adequate solution was NOT found. Please try a different substance combination');    }
+        Form1.Memo1.Lines.Add('Gross errors on ' + all_element_names[i] +
           ' are too high, probably an adequate solution was NOT found. Please try a different substance combination');
-
+      end;
     end;
 
     end ;
+
+    // display gross error in the form
+
+    Lbl_Err_NO3.Caption:=Format('%*.*f', [0, 2, gross_error[0]]);
+    Lbl_Err_K.Caption:=Format('%*.*f', [0, 2, gross_error[1]]);
+    Lbl_Err_P.Caption:=Format('%*.*f', [0, 2, gross_error[2]]);
+    Lbl_Err_Mg.Caption:=Format('%*.*f', [0, 2, gross_error[3]]);
+    Lbl_Err_Ca.Caption:=Format('%*.*f', [0, 2, gross_error[4]]);
+    Lbl_Err_S.Caption:=Format('%*.*f', [0, 2, gross_error[5]]);
+    Lbl_Err_Fe.Caption:=Format('%*.*f', [0, 2, gross_error[6]]);
+    Lbl_Err_Zn.Caption:=Format('%*.*f', [0, 2, gross_error[7]]);
+    Lbl_Err_B.Caption:=Format('%*.*f', [0, 2, gross_error[8]]);
+    Lbl_Err_Cu.Caption:=Format('%*.*f', [0, 2, gross_error[9]]);
+    Lbl_Err_Mo.Caption:=Format('%*.*f', [0, 2, gross_error[10]]);
+    Lbl_Err_Na.Caption:=Format('%*.*f', [0, 2, gross_error[11]]);
+    Lbl_Err_Si.Caption:=Format('%*.*f', [0, 2, gross_error[12]]);
+    Lbl_Err_Cl.Caption:=Format('%*.*f', [0, 2, gross_error[13]]);
+    Lbl_Err_Mn.Caption:=Format('%*.*f', [0, 2, gross_error[14]]);
+    Lbl_Err_NH.Caption:=Format('%*.*f', [0, 2, gross_error[15]]);
 
     Button10.Enabled := True;
 
@@ -2948,7 +3009,7 @@ if RadioButton13.Checked then
 
     // analysis of stock solutions
 
-    if RadioButton6.Checked then
+    if RadBtn_ABSolution.Checked then
 
     begin
 
@@ -2977,7 +3038,7 @@ if RadioButton13.Checked then
         // the 100 is to convert to percentage and the 100,000 to convert cubic meter to mL
         // in order to do the %W/V calculation (g to mL).
 
-        test := test * StrtoFloat(Edit17.Text) * 100 / (Volume * 1000000);
+        test := test * StrtoFloat(TxtBox_ConcFactor.Text) * 100 / (Volume * 1000000);
 
         if (all_element_names[i] <> 'P') and (all_element_names[i] <> 'K') then
 
@@ -3030,7 +3091,7 @@ if RadioButton13.Checked then
         // the 100 is to convert to percentage and the 100,000 to convert cubic meter to mL
         // in order to do the %W/V calculation (g to mL).
 
-        test := test * StrtoFloat(Edit17.Text) * 100 / (Volume * 1000000);
+        test := test * StrtoFloat(TxtBox_ConcFactor.Text) * 100 / (Volume * 1000000);
 
         if (all_element_names[i] <> 'P') and (all_element_names[i] <> 'K') then
 
@@ -3120,7 +3181,7 @@ if RadioButton13.Checked then
 
     // check for basic compatibility problems of stock solutions
 
-    if  RadioButton6.Checked then
+    if  RadBtn_ABSolution.Checked then
 
     begin
 
@@ -3160,7 +3221,7 @@ if RadioButton13.Checked then
 
           if temp1 > 30 then
           ShowMessage('Your A solution might be too concentrated, please make sure you run solubility tests before preparing any large batches') ;
-
+          Form1.Memo1.Lines.Add('Your A solution might be too concentrated, please make sure you run solubility tests before preparing any large batches') ;
 
           temp1 :=  0 ;
 
@@ -3174,7 +3235,7 @@ if RadioButton13.Checked then
 
           if temp1 > 30 then
           ShowMessage('Your B solution might be too concentrated, please make sure you run solubility tests before preparing any large batches') ;
-
+          Form1.Memo1.Lines.Add('Your B solution might be too concentrated, please make sure you run solubility tests before preparing any large batches') ;
 
 
     end ;
@@ -3426,9 +3487,224 @@ if RadioButton13.Checked then
     hb_ratios.Form14.StringGrid1.Cells[0, hb_ratios.Form14.StringGrid1.RowCount - 1] :=('Ca: Mg') ;
     hb_ratios.Form14.StringGrid1.Cells[1, hb_ratios.Form14.StringGrid1.RowCount - 2] :=(getratio('Ca', 'Mg', 'K', 2) ) ;
 
-  if CheckBox3.Checked = false then
+  if ChkBox_DisablePopUp.Checked = false then
   ShowMessage('Calculation carried out successfully :o)');
 
+
+end;
+
+procedure TForm1.Button30Click(Sender: TObject);
+var
+MyDbf: TDbf;
+i : integer ;
+selected_item : integer ;
+begin
+
+MyDbf := TDbf.Create(nil) ;
+MyDbf.FilePathFull := '';
+MyDbf.TableName := 'substances.dbf';
+MyDbf.Open             ;
+MyDbf.Active := true ;
+
+if ListBox1.SelCount = 0 then // No ítems selected
+     Exit;
+
+For i := 0 to ListBox1.Items.Count - 1 do
+
+         begin
+                               if ListBox1.Selected [i] then
+                               begin
+                                selected_item := i ;
+                               end;
+         end;
+
+MyDbf.Filter := 'Name=' + QuotedStr(ListBox1.Items[selected_item]) ;
+
+    MyDbf.Filtered := true;       // This selects the filtered set
+    MyDbf.First;                  // moves the the first filtered data
+    ShowMessage('Deleting ' + MyDbf.FieldByName('Name').AsString + ' from database');
+    MyDbf.Delete ;
+
+MyDbf.Close ;
+
+MyDbf.Free ;
+
+ListBox1.Items.Delete(selected_item);
+
+end;
+
+procedure TForm1.Button31Click(Sender: TObject);
+var
+i : integer ;
+selected_item : integer ;
+MyDbf: TDbf;
+begin
+
+   if ListBox1.SelCount = 0 then // No ítems selected
+     Exit;
+
+     For i := 0 to ListBox1.Items.Count - 1 do
+
+         begin
+                               if ListBox1.Selected [i] then
+                               begin
+                                selected_item := i ;
+                               end;
+         end;
+
+   MyDbf := TDbf.Create(nil) ;
+   MyDbf.FilePathFull := '';
+   MyDbf.TableName := 'substances.dbf';
+   MyDbf.Open             ;
+   MyDbf.Active := true ;
+
+
+         MyDbf.Filter := 'Name=' + QuotedStr(ListBox1.Items[selected_item]) ;
+
+    MyDbf.Filtered := true;       // This selects the filtered set
+    MyDbf.First;                  // moves the the first filtered data
+
+    hb_newcustomsalt.Form3.Edit15.text := MyDbf.FieldByName('Name').AsString;
+    hb_newcustomsalt.Form3.Edit17.text := MyDbf.FieldByName('Formula').AsString;
+    hb_newcustomsalt.Form3.Edit16.text := FloattoStr(MyDbf.FieldByName('Purity').AsFloat*100) ;
+    hb_newcustomsalt.Form3.Edit1.text := MyDbf.FieldByName('N (NO3-)').AsString ;
+    hb_newcustomsalt.Form3.Edit3.text := MyDbf.FieldByName('P').AsString ;
+    hb_newcustomsalt.Form3.Edit2.text := MyDbf.FieldByName('K').AsString ;
+    hb_newcustomsalt.Form3.Edit4.text := MyDbf.FieldByName('Mg').AsString ;
+    hb_newcustomsalt.Form3.Edit5.text := MyDbf.FieldByName('Ca').AsString ;
+    hb_newcustomsalt.Form3.Edit6.text := MyDbf.FieldByName('S').AsString ;
+    hb_newcustomsalt.Form3.Edit7.text := MyDbf.FieldByName('Fe').AsString ;
+    hb_newcustomsalt.Form3.Edit9.text := MyDbf.FieldByName('B').AsString ;
+    hb_newcustomsalt.Form3.Edit8.text := MyDbf.FieldByName('Zn').AsString ;
+    hb_newcustomsalt.Form3.Edit10.text := MyDbf.FieldByName('Cu').AsString ;
+    hb_newcustomsalt.Form3.Edit11.text := MyDbf.FieldByName('Mo').AsString ;
+    hb_newcustomsalt.Form3.Edit12.text := MyDbf.FieldByName('Na').AsString ;
+    hb_newcustomsalt.Form3.Edit18.text := MyDbf.FieldByName('Mn').AsString ;
+    hb_newcustomsalt.Form3.Edit13.text := MyDbf.FieldByName('Si').AsString ;
+    hb_newcustomsalt.Form3.Edit14.text := MyDbf.FieldByName('Cl').AsString ;
+    hb_newcustomsalt.Form3.Edit21.text := MyDbf.FieldByName('Cost').AsString ;
+    hb_newcustomsalt.Form3.Edit19.text := MyDbf.FieldByName('N (NH4+)').AsString ;
+    hb_newcustomsalt.Form3.Edit20.text := MyDbf.FieldByName('ConcType').AsString ;
+    hb_newcustomsalt.Form3.Edit22.text := MyDbf.FieldByName('Density').AsString ;
+
+    if MyDbf.FieldByName('IsLiquid').AsInteger = 0 then
+    hb_newcustomsalt.Form3.CheckBox2.Checked := false ;
+
+    if MyDbf.FieldByName('IsLiquid').AsInteger = 1 then
+    hb_newcustomsalt.Form3.CheckBox2.Checked := true ;
+
+    MyDbf.Close ;
+
+    MyDbf.Free ;
+
+   if hb_newcustomsalt.Form3.Checkbox2.Checked then
+
+   begin
+
+   hb_newcustomsalt.Form3.Edit22.Visible := true ;
+   hb_newcustomsalt.Form3.Label22.Visible := true ;
+   end;
+
+    if hb_newcustomsalt.Form3.Checkbox2.Checked = false then
+
+   begin
+
+   hb_newcustomsalt.Form3.Edit22.Visible := false ;
+   hb_newcustomsalt.Form3.Label22.Visible := false ;
+   end;
+
+  hb_newcustomsalt.Form3.Button1.Enabled := False ;
+
+  hb_newcustomsalt.Form3.Button2.Enabled := True;
+
+  hb_newcustomsalt.Form3.Label23.Caption := ListBox1.Items[selected_item] ;
+
+  hb_newcustomsalt.Form3.ComboBox1.ItemIndex := 0;
+
+  hb_newcustomsalt.Form3.ComboBox2.ItemIndex := 0 ;
+
+  hb_newcustomsalt.Form3.ComboBox3.ItemIndex := 0 ;
+
+  hb_newcustomsalt.Form3.Visible := True ;
+
+end;
+
+procedure TForm1.Button32Click(Sender: TObject);
+var
+i : integer ;
+selected_item : integer ;
+MyDbf: TDbf;
+begin
+
+   if ListBox2.SelCount = 0 then // No ítems selected
+     Exit;
+
+     For i := 0 to ListBox2.Items.Count - 1 do
+
+         begin
+                               if ListBox2.Selected [i] then
+                               begin
+                                selected_item := i ;
+                               end;
+         end;
+
+   MyDbf := TDbf.Create(nil) ;
+   MyDbf.FilePathFull := '';
+   MyDbf.TableName := 'substances_used.dbf';
+   MyDbf.Open             ;
+   MyDbf.Active := true ;
+
+    MyDbf.Filter := 'Name=' + QuotedStr(ListBox2.Items[selected_item]) ;
+
+    MyDbf.Filtered := true;       // This selects the filtered set
+    MyDbf.First;                  // moves the the first filtered data
+
+    hb_addweight.Form4.Edit1.text := MyDbf.FieldByName('Weight').AsString;
+
+    MyDbf.Close ;
+
+    MyDbf.Free ;
+
+
+hb_addweight.Form4.Label2.Caption := ListBox2.Items[selected_item] ;
+
+hb_addweight.Form4.Visible := True ;
+
+end;
+
+procedure TForm1.Button33Click(Sender: TObject);
+var
+i : integer ;
+selected_item : integer ;
+MyDbf: TDbf;
+begin
+
+
+   MyDbf := TDbf.Create(nil) ;
+   MyDbf.FilePathFull := '';
+   MyDbf.TableName := 'substances_used.dbf';
+   MyDbf.Open             ;
+   MyDbf.Active := true ;
+
+
+    while not MyDbf.EOF do
+    begin
+
+    MyDbf.Edit;
+
+    MyDbf.FieldByName('Weight').AsFloat := 0;
+
+    MyDbf.Post;
+
+     MyDbf.Next;
+
+    end;
+
+    MyDbf.Close ;
+
+    MyDbf.Free ;
+
+ ShowMessage('All used substance weights have been reset to zero') ;
 
 end;
 
@@ -3998,16 +4274,12 @@ begin
 end;
 
 
-procedure TForm1.Button4Click(Sender: TObject);
+procedure TForm1.Btn_SaveFormulaToDBClick(Sender: TObject);
 var
   MyDbf: TDbf;
+  responseStr : string;
 begin
-
-  if Edit25.Text = 'Input Formulation Name Here' then
-  begin
-    ShowMessage('Please input a name within the name input field') ;
-    Exit;
-  end;
+  responseStr := inputbox('Formula Name', 'Please type the name of the formulation!', 'special formula');
 
   MyDbf := TDbf.Create(nil);
   MyDbf.FilePathFull := '';
@@ -4017,7 +4289,7 @@ begin
 
   MyDbf.Insert;
 
-  MyDbf.FieldByName('Name').AsString := Edit25.Text;
+  MyDbf.FieldByName('Name').AsString := responseStr;
   MyDbf.FieldByName('P').AsFloat     := StrtoFloat(Edit3.Text);
   MyDbf.FieldByName('K').AsFloat     := StrtoFloat(Edit2.Text);
   MyDbf.FieldByName('N (NO3-)').AsFloat := StrtoFloat(Edit1.Text);
@@ -4053,15 +4325,15 @@ begin
 
   MyDbf.Free;
 
-  ShowMessage('Formulation named ' + Edit25.Text + ' has been saved to the Database');
+  ShowMessage('Formulation named ' + responseStr + ' has been saved to the Database');
 
   Form1.UpdateComboBox;
 
-  Button6.Enabled := True;
+  Btn_DeleteFormulaFromDB.Enabled := True;
 
 end;
 
-procedure TForm1.Button4Resize(Sender: TObject);
+procedure TForm1.Btn_SaveFormulaToDBResize(Sender: TObject);
 begin
 
 end;
@@ -4128,7 +4400,7 @@ begin
 
 end;
 
-procedure TForm1.Button6Click(Sender: TObject);
+procedure TForm1.Btn_DeleteFormulaFromDBClick(Sender: TObject);
 var
   MyDbf: TDbf;
   i:     integer;
@@ -4167,18 +4439,18 @@ begin
   begin
 
     ComboBox1.Text  := 'Select formulation from DB';
-    Button6.Enabled := False;
+    Btn_DeleteFormulaFromDB.Enabled := False;
 
   end;
 
 end;
 
-procedure TForm1.Button7Click(Sender: TObject);
+procedure TForm1.Btn_AddCommFormulaClick(Sender: TObject);
 begin
   hb_commercialnutrient.Form5.Visible := True;
 end;
 
-procedure TForm1.Button8Click(Sender: TObject);
+procedure TForm1.Btn_SetWtrQualityClick(Sender: TObject);
 begin
 
   hb_waterquality.Form6.Visible := True;
@@ -4196,7 +4468,7 @@ begin
 
 end;
 
-procedure TForm1.Button9Click(Sender: TObject);
+procedure TForm1.Btn_SetInstrPrecisionClick(Sender: TObject);
 begin
 
   hb_insprecision.Form7.Visible := True;
@@ -4266,7 +4538,7 @@ begin
   else
   answer[0] := 'UPDATE = 0' ;
 
-  if CheckBox3.Checked then
+  if ChkBox_DisablePopUp.Checked then
   answer[1] := 'POPUP = 1'
   else
   answer[1] := 'POPUP = 0' ;
@@ -4290,7 +4562,7 @@ begin
 
 end;
 
-procedure TForm1.CheckBox3Change(Sender: TObject);
+procedure TForm1.ChkBox_DisablePopUpChange(Sender: TObject);
 begin
 
   setinivalues;
@@ -4347,7 +4619,7 @@ begin
   if Units = 'mN' then
   RadioButton13.Checked := true ;
 
-  Edit25.Text := MyDbf.FieldByName('Name').AsString;
+  Lbl_FormulaName.Caption := MyDbf.FieldByName('Name').AsString;
   Edit1.Text  := MyDbf.FieldByName('N (NO3-)').AsString;
   Edit3.Text  := MyDbf.FieldByName('P').AsString;
   Edit2.Text  := MyDbf.FieldByName('K').AsString;
@@ -4370,7 +4642,7 @@ begin
 
   MyDbf.Free;
 
-  Button6.Enabled := True;
+  Btn_DeleteFormulaFromDB.Enabled := True;
 
 end;
 
@@ -4434,11 +4706,6 @@ begin
   WindowState := wsNormal ;
   ShowMessage('Maximizing is currently not supported due to limitations of the window resizing Lazarus implementations') ;
   end;
-
-end;
-
-procedure TForm1.ListBox1Click(Sender: TObject);
-begin
 
 end;
 
@@ -4532,6 +4799,11 @@ begin
 
   StringGrid2.CopyToClipboard(true);
   StringGrid2.CopyToClipboard ;
+
+end;
+
+procedure TForm1.PageControl1Change(Sender: TObject);
+begin
 
 end;
 
@@ -4925,7 +5197,7 @@ begin
     begin
 
       (FindComponent('Edit' + IntToStr(i)) as TEdit).Enabled := False;
-      RadioButton7.Checked := True;
+      RadBtn_DirectAddition.Checked := True;
       Panel2.Enabled := False;
 
     end;
@@ -4936,20 +5208,20 @@ begin
 
 end;
 
-procedure TForm1.RadioButton6Change(Sender: TObject);
+procedure TForm1.RadBtn_ABSolutionChange(Sender: TObject);
 begin
 
   Label17.Caption := 'Stock solution volume';
-  Edit17.Enabled  := True;
+  TxtBox_ConcFactor.Enabled  := True;
   cleanresults;
 
 end;
 
-procedure TForm1.RadioButton7Change(Sender: TObject);
+procedure TForm1.RadBtn_DirectAdditionChange(Sender: TObject);
 begin
 
   Label17.Caption := 'Volume';
-  Edit17.Enabled  := False;
+  TxtBox_ConcFactor.Enabled  := False;
   cleanresults;
 
 end;

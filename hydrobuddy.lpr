@@ -9,7 +9,7 @@ uses
   Interfaces, // this includes the LCL widgetset
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs,
   ComCtrls, StdCtrls, Menus, ExtCtrls, tachartlazaruspkg, HB_Main,
-  hb_load_salts, hb_newcustomsalt, densesolver, hb_addweight,
+  hb_newcustomsalt, densesolver, hb_addweight,
   hb_commercialnutrient, hb_waterquality, hb_insprecision, hb_stockanalysis,
   Dbf, db, hb_persubstance, hb_datasetname, hb_analysis, synaser, HTTPSend,
   hb_freedom, pingsend, dbf_fields, hb_ph, hb_ratios, hb_comparison;
@@ -301,151 +301,6 @@ Form1.StringGrid4.Clean ;
 
 end ;
 
-procedure DownloadFile(const Url, PathToSaveTo: string);
-var
-fs : TFileStream ;
-begin
-   fs := TFileStream.Create(PathToSaveTo, fmOpenWrite or fmCreate);
-   try
-      HttpGetBinary(Url, fs);
-   finally
-      fs.Free;
-   end;
-end;
-
-
-procedure CheckUpdate ;
-var
-version : TStringList ;
-update_ini: TStringList ;
-ping:TPINGSend;
-begin
-
-version := TStringList.Create;
-
-update_ini :=  TStringList.Create;
-
-if FileExists('update.ini') then
-update_ini.LoadFromFile( 'update.ini') ;
-
-if FileExists('update.ini') = false then
-begin
-ShowMessage('File update.ini was not found. Automatic updates will not be performed. You can try to generate an update.ini file by changing the checkbox controlling the automatic update procedure within the main tab' );
-Exit ;
-end;
-
-if update_ini[0] = 'UPDATE = 1' then
-
-begin
-
-
-  ping :=TPingSend.Create ;
-  try
-    if ping.ping('www.google.com') = false then
-
-    Begin
-      ShowMessage('Automatic update failed: No internet connection');
-      Exit ;
-    end;
-
-  finally
-    ping.Free;
-    end ;
-
-
-
-DownloadFile('http://entirely4you.com/latestversion.txt', 'latestversion.txt') ;
-
-
-
-if FileExists(  'latestversion.txt' ) then
-
-begin
-
-  version.LoadFromFile( 'latestversion.txt') ;
-
-  if version.Count = 0 then
-  begin
-
-  ShowMessage('Error : Automatic update failed, please check your firewall and internet connection') ;
-  Exit ;
-
-  end;
-
-  if StrToFloat(Form1.LabelVersion.Caption) < StrtoFloat(version[0]) then
-
-  begin
-
-  if MessageDlg('Question', 'Current version is not the latest one, update?', mtConfirmation,
-   [mbYes, mbNo],0) = mrYes then
-  begin
-  ShowMessage('Perfoming automatic update to version ' + version[0]) ;
-  SysUtils.ExecuteProcess( UTF8ToSys('hydrobuddy_updater_02.exe'), '' , []);
-  Application.Terminate;
-  end;
-
-  end;
-
-  if StrToFloat(Form1.LabelVersion.Caption) >= StrtoFloat(version[0]) then
-
-  begin
-
-  ShowMessage('Current version is up to date') ;
-
-  end;
-
-end ;
-
-
-
-if FileExists(  'latestversion.txt' ) = false then
-
-   begin
-
-        ShowMessage('Error : Automatic update failed, please check your firewall and internet connection') ;
-
-   end ;
-
-
-
-end ;
-
-if update_ini[2] = 'SMALLWINDOW = 1' then
-begin
-
-Form1.BorderStyle := bsSizeable ;
-Form1.Height := 500;
-Form1.Width := 500 ;
-Form1.AutoScroll := True ;
-
-end;
-
-if update_ini[0] <> 'UPDATE = 1' then
-Form1.Checkbox4.Checked := false ;
-
-if update_ini[1] <> 'POPUP = 0' then
-Form1.Checkbox3.Checked := true ;
-
-if update_ini[2] <> 'SMALLWINDOW = 0' then
-Form1.Checkbox5.Checked := true ;
-
-   update_ini.Free  ;
-   version.Free     ;
-
-// update the substance database using downloaded file
-
-if FileExists('substances_updated.dbf') then
-Form1.UpdateDB_substances ;
-
-// update the formulations database using downloaded file
-
-if FileExists('formulations_updated.dbf') then
-Form1.UpdateDB_formulations ;
-
-
-
-  end;
-
 procedure UpdateComboBoxes ;
 
 begin
@@ -484,89 +339,12 @@ begin
 
 end;
 
-procedure PopulateSaltList;
-var
-  MyDbf: TDbf;
-  i:     integer;
-  j:     integer;
-begin
-
-  Form1.ListBox1.Items.Clear;
-  Form1.ListBox2.Items.Clear;
-
-  MyDbf := TDbf.Create(nil);
-  MyDbf.FilePathFull := '';
-  MyDbf.TableName := 'substances.dbf';
-  MyDbf.Open;
-  MyDbf.Active := True;
-
-  MyDbf.First;                  // moves to the first data
-
-  while not MyDbf.EOF do
-  begin
-    //hb_load_salts.Form2.ListBox1.Items.Add(MyDbf.FieldByName('Name').AsString);
-    Form1.ListBox1.Items.Add(MyDbf.FieldByName('Name').AsString);
-
-    MyDbf.Next;                                     // use .next here NOT .findnext!
-  end;
-
-  MyDbf.Close;
-
-  MyDbf := TDbf.Create(nil);
-  MyDbf.FilePathFull := '';
-  MyDbf.TableName := 'substances_used.dbf';
-  MyDbf.Open;
-  MyDbf.Active := True;
-
-  MyDbf.First;                  // moves to the first data
-
-  while not MyDbf.EOF do
-  begin
-    Form1.ListBox2.Items.Add(MyDbf.FieldByName('Name').AsString);
-    MyDbf.Next;                                     // use .next here NOT .findnext!
-  end;
-
-  MyDbf.Close;
-
-  MyDbf.Free;
-
-  for i := 0 to Form1.ListBox2.Items.Count - 1 do
-
-  begin
-
-    j := 0;
-
-    while j <= Form1.ListBox1.Items.Count - 1 do
-
-    begin
-
-      if (Form1.ListBox1.Items[j] = Form1.ListBox2.Items[i]) then
-
-      begin
-        Form1.ListBox1.Items.Delete(j);
-        j := j + 1;
-      end;
-
-      j := j + 1;
-
-    end;
-
-  end;
-
-
-  // sort listboxes
-  Form1.ListBox2.Sorted := true ;
-  Form1.ListBox1.Sorted := true ;
-
-end;
-
 {$R *.res}
 
 begin
   Application.Title:='HydroBuddy - an Open source nutrient calculator';
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TForm3, Form3);
   Application.CreateForm(TForm4, Form4);
   Application.CreateForm(TForm5, Form5);
@@ -582,7 +360,7 @@ begin
   AssignSeparator;
   CheckDatabaseFiles;
   UpdateDatabaseFields ;
-  PopulateSaltList;
+  Form1.UpdateSaltList;
   //CheckUpdate ;
   AssignValues ;
   UpdateComboBoxes ;
