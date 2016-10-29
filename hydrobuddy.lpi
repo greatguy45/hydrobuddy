@@ -360,7 +360,7 @@
         <ResourceBaseClass Value="Form"/>
         <TopLine Value="24"/>
         <CursorPos X="28" Y="41"/>
-        <UsageCount Value="170"/>
+        <UsageCount Value="171"/>
       </Unit30>
       <Unit31>
         <Filename Value="synaser.pas"/>
