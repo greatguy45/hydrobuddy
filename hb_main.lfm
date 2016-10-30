@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 320
-  Height = 806
+  Left = 112
+  Height = 799
   Top = 23
-  Width = 1135
+  Width = 1354
   HorzScrollBar.Page = 841
   HorzScrollBar.Range = 824
   VertScrollBar.Page = 691
@@ -10,8 +10,8 @@ object Form1: TForm1
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'HydroBuddy v1.60 - Hydroponic Nutrient Calculator'
-  ClientHeight = 806
-  ClientWidth = 1135
+  ClientHeight = 799
+  ClientWidth = 1354
   DragKind = dkDock
   Icon.Data = {
     DE2800000000010001003232000001002000C828000016000000280000003200
@@ -352,10 +352,10 @@ object Form1: TForm1
     Left = 8
     Height = 792
     Top = 0
-    Width = 1016
-    ActivePage = TabSheet2
+    Width = 1336
+    ActivePage = TabSheet1
     ParentFont = False
-    TabIndex = 2
+    TabIndex = 1
     TabOrder = 0
     OnChange = PageControl1Change
     object TabSheet4: TTabSheet
@@ -22382,7 +22382,7 @@ object Form1: TForm1
     object TabSheet1: TTabSheet
       Caption = 'Main Page'
       ClientHeight = 753
-      ClientWidth = 1010
+      ClientWidth = 1330
       OnContextPopup = TabSheet1ContextPopup
       ParentShowHint = False
       ShowHint = True
@@ -22928,7 +22928,7 @@ object Form1: TForm1
           OnChange = RadioButton5Change
           TabOrder = 0
         end
-        object Button10: TButton
+        object Btn_Weight2DB: TButton
           Left = 224
           Height = 25
           Hint = 'Copy weights resulting from a formulation calculation to the database (to use within a weights to formulation calculation)'
@@ -22936,7 +22936,7 @@ object Form1: TForm1
           Width = 174
           Caption = 'Copy Weight Results to DB'
           Enabled = False
-          OnClick = Button10Click
+          OnClick = Btn_Weight2DBClick
           TabOrder = 2
         end
       end
@@ -23077,9 +23077,9 @@ object Form1: TForm1
         end
       end
       object Button5: TButton
-        Left = 462
+        Left = 246
         Height = 25
-        Top = 7
+        Top = 8
         Width = 88
         Caption = 'Create DB'
         Enabled = False
@@ -23098,9 +23098,9 @@ object Form1: TForm1
         Text = '0.5'
       end
       object Button3: TButton
-        Left = 380
+        Left = 164
         Height = 25
-        Top = 7
+        Top = 8
         Width = 91
         Caption = 'Add Field DB'
         Enabled = False
@@ -23185,9 +23185,9 @@ object Form1: TForm1
         end
       end
       object Button23: TButton
-        Left = 548
+        Left = 332
         Height = 25
-        Top = 7
+        Top = 8
         Width = 75
         Caption = 'Add field S'
         OnClick = Button23Click
@@ -23195,9 +23195,9 @@ object Form1: TForm1
         Visible = False
       end
       object Button24: TButton
-        Left = 312
+        Left = 96
         Height = 25
-        Top = 7
+        Top = 8
         Width = 75
         Caption = 'SetValues'
         OnClick = Button24Click
@@ -24373,9 +24373,9 @@ object Form1: TForm1
         TabOrder = 43
       end
       object Lbl_FormulaName: TLabel
-        Left = 40
+        Left = 320
         Height = 32
-        Top = 8
+        Top = 1
         Width = 239
         Caption = 'No Selected Formula'
         Font.Color = clBlue
@@ -24495,9 +24495,9 @@ object Form1: TForm1
         ParentColor = False
       end
       object Button25: TButton
-        Left = 752
+        Left = 1024
         Height = 24
-        Top = 8
+        Top = 232
         Width = 143
         Caption = 'Nutrient Ratio Analysis'
         Font.Height = -12
@@ -24507,45 +24507,22 @@ object Form1: TForm1
         TabOrder = 47
       end
       object Button12: TBitBtn
-        Left = 752
+        Left = 1176
         Height = 24
         Hint = 'Click here to see the % compositions analysis of the stock solutions '
-        Top = 37
+        Top = 232
         Width = 143
         Caption = 'Stock Solution Analysis'
         Enabled = False
         OnClick = Button12Click
         TabOrder = 48
       end
-    end
-    object TabSheet2: TTabSheet
-      Caption = 'Results'
-      ClientHeight = 753
-      ClientWidth = 1010
-      Font.Height = -11
-      ParentFont = False
-      object Label20: TLabel
-        Left = 452
-        Height = 104
-        Top = 320
-        Width = 295
-        AutoSize = False
-        Caption = 'Any observations about the calculations will be posted here'
-        Font.CharSet = ANSI_CHARSET
-        Font.Height = -16
-        Font.Name = 'Times New Roman'
-        Font.Pitch = fpVariable
-        Font.Quality = fqDraft
-        ParentColor = False
-        ParentFont = False
-        WordWrap = True
-      end
-      object Button13: TBitBtn
-        Left = 56
-        Height = 32
+      object Btn_Exp2CSV: TBitBtn
+        Left = 1176
+        Height = 19
         Hint = 'This button exports all the data within this page to a CSV for easy access and printing  using any spreadsheet program'
-        Top = 600
-        Width = 132
+        Top = 262
+        Width = 143
         Caption = 'Export To Csv'
         Glyph.Data = {
           460E0000424D460E00000000000036000000280000001E0000001E0000000100
@@ -24664,14 +24641,14 @@ object Form1: TForm1
           0000000000000000000000000000000000000000000000000000000000000000
           00000000000000000000
         }
-        OnClick = Button13Click
-        TabOrder = 0
+        OnClick = Btn_Exp2CSVClick
+        TabOrder = 49
       end
       object StringGrid1: TStringGrid
-        Left = 54
-        Height = 312
-        Top = 277
-        Width = 368
+        Left = 1016
+        Height = 320
+        Top = 288
+        Width = 312
         ColCount = 4
         Columns = <        
           item
@@ -24680,79 +24657,61 @@ object Form1: TForm1
           item
             Alignment = taCenter
             Title.Alignment = taCenter
-            Title.Caption = 'Result (ppm)'
+            Title.Caption = 'Result(ppm)'
           end        
           item
             Alignment = taCenter
             Title.Alignment = taCenter
-            Title.Caption = 'Gross Error'
+            Title.Caption = 'Gross Err.'
           end        
           item
             Alignment = taCenter
-            Title.Alignment = taCenter
-            Title.Caption = 'Instrumental Error'
+            Title.Alignment = taLeftJustify
+            Title.Caption = 'Instrum. Err.'
             Width = 105
           end>
-        DefaultColWidth = 85
+        DefaultColWidth = 70
         DefaultRowHeight = 18
         FixedCols = 0
+        Font.Height = -10
+        Font.Name = 'Lucida Grande'
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goSmoothScroll]
+        ParentFont = False
         RowCount = 17
-        TabOrder = 1
+        TabOrder = 50
         TitleFont.Height = -11
       end
-      object StringGrid2: TStringGrid
-        Left = 54
-        Height = 248
-        Top = 13
-        Width = 693
-        ColCount = 4
-        Columns = <        
-          item
-            ReadOnly = True
-            Title.Caption = 'Substance Name'
-          end        
-          item
-            Alignment = taCenter
-            ReadOnly = True
-            Title.Alignment = taCenter
-            Title.Caption = 'Formula'
-          end        
-          item
-            Alignment = taCenter
-            Title.Alignment = taCenter
-            Title.Caption = 'Mass (g) [Edit to fine-tune]'
-          end        
-          item
-            Alignment = taCenter
-            ReadOnly = True
-            Title.Alignment = taCenter
-            Title.Caption = 'Preparation Cost'
-          end>
-        DefaultColWidth = 170
-        DefaultRowHeight = 20
-        FixedCols = 0
-        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
-        RowCount = 1
-        TabOrder = 2
-        TitleFont.Height = -11
-      end
-      object Label18: TLabel
-        Left = 452
-        Height = 20
-        Top = 277
-        Width = 75
-        Caption = 'Total Cost'
-        Font.Height = -15
-        Font.Name = 'Sans'
-        Font.Style = [fsBold]
+      object Label40: TLabel
+        Left = 1024
+        Height = 18
+        Top = 264
+        Width = 135
+        Caption = 'Calculation Error:'
+        Font.Height = -16
         ParentColor = False
         ParentFont = False
+      end
+      object Label20: TLabel
+        Left = 1016
+        Height = 132
+        Top = 616
+        Width = 311
+        AutoSize = False
+        Caption = 'Any observations about the calculations will be posted here'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Times New Roman'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
       end
     end
     object TabSheet14: TTabSheet
       Caption = 'Data Log'
-      ClientHeight = 775
-      ClientWidth = 1004
+      ClientHeight = 753
+      ClientWidth = 1330
       object Label50: TLabel
         Left = 371
         Height = 192
@@ -24769,7 +24728,7 @@ object Form1: TForm1
         Left = 604
         Height = 16
         Top = 416
-        Width = 28
+        Width = 31
         Caption = 'Time'
         ParentColor = False
       end
@@ -24777,7 +24736,7 @@ object Form1: TForm1
         Left = 604
         Height = 16
         Top = 456
-        Width = 17
+        Width = 18
         Caption = 'pH'
         ParentColor = False
       end
@@ -24785,7 +24744,7 @@ object Form1: TForm1
         Left = 604
         Height = 16
         Top = 496
-        Width = 15
+        Width = 16
         Caption = 'EC'
         ParentColor = False
       end
@@ -24793,7 +24752,7 @@ object Form1: TForm1
         Left = 604
         Height = 16
         Top = 536
-        Width = 40
+        Width = 45
         Caption = 'pH Out'
         ParentColor = False
         Visible = False
@@ -24802,14 +24761,14 @@ object Form1: TForm1
         Left = 604
         Height = 16
         Top = 576
-        Width = 38
+        Width = 43
         Caption = 'EC Out'
         ParentColor = False
         Visible = False
       end
       object Edit18: TEdit
         Left = 652
-        Height = 23
+        Height = 22
         Top = 416
         Width = 136
         TabOrder = 0
@@ -24826,7 +24785,7 @@ object Form1: TForm1
       end
       object Edit20: TEdit
         Left = 652
-        Height = 23
+        Height = 22
         Top = 456
         Width = 136
         TabOrder = 2
@@ -24834,7 +24793,7 @@ object Form1: TForm1
       end
       object Edit21: TEdit
         Left = 652
-        Height = 23
+        Height = 22
         Top = 496
         Width = 136
         TabOrder = 3
@@ -24842,7 +24801,7 @@ object Form1: TForm1
       end
       object Edit22: TEdit
         Left = 652
-        Height = 23
+        Height = 22
         Top = 536
         Width = 136
         TabOrder = 4
@@ -24851,7 +24810,7 @@ object Form1: TForm1
       end
       object Edit23: TEdit
         Left = 652
-        Height = 23
+        Height = 22
         Top = 576
         Width = 136
         TabOrder = 5
@@ -24924,9 +24883,9 @@ object Form1: TForm1
       end
       object CheckBox2: TCheckBox
         Left = 68
-        Height = 19
+        Height = 18
         Top = 318
-        Width = 90
+        Width = 101
         Caption = 'Run to Waste'
         OnChange = CheckBox2Change
         TabOrder = 13
@@ -25036,8 +24995,8 @@ object Form1: TForm1
     end
     object TabSheet3: TTabSheet
       Caption = 'About'
-      ClientHeight = 775
-      ClientWidth = 1004
+      ClientHeight = 753
+      ClientWidth = 1010
       object Panel7: TPanel
         Left = 235
         Height = 336
@@ -27840,11 +27799,11 @@ object Form1: TForm1
     end
   end
   object LabelVersion: TLabel
-    Left = 728
+    Left = 760
     Height = 16
-    Top = 32
+    Top = 40
     Width = 21
-    Caption = '1.5'
+    Caption = '1.6'
     ParentColor = False
     Visible = False
   end

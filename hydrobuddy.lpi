@@ -43,11 +43,11 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="42">
+    <Units Count="44">
       <Unit0>
         <Filename Value="hydrobuddy.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="8"/>
         <WindowIndex Value="1"/>
         <TopLine Value="2"/>
         <CursorPos X="18" Y="20"/>
@@ -65,12 +65,12 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="741"/>
-        <CursorPos X="3" Y="743"/>
+        <TopLine Value="5300"/>
+        <CursorPos X="3" Y="5318"/>
         <UsageCount Value="200"/>
         <Bookmarks Count="2">
-          <Item0 X="34" Y="1093"/>
-          <Item1 X="3" Y="2136" ID="1"/>
+          <Item0 X="34" Y="1090"/>
+          <Item1 X="3" Y="2133" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -91,7 +91,7 @@
         <ComponentName Value="Form3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="11"/>
         <WindowIndex Value="1"/>
         <CursorPos X="40" Y="10"/>
         <UsageCount Value="200"/>
@@ -147,7 +147,7 @@
         <ComponentName Value="Form5"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="14"/>
+        <EditorIndex Value="16"/>
         <WindowIndex Value="1"/>
         <TopLine Value="354"/>
         <CursorPos X="26" Y="370"/>
@@ -160,7 +160,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form6"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="16"/>
+        <EditorIndex Value="18"/>
         <WindowIndex Value="1"/>
         <TopLine Value="272"/>
         <CursorPos Y="298"/>
@@ -172,7 +172,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form7"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="18"/>
+        <EditorIndex Value="20"/>
         <WindowIndex Value="1"/>
         <TopLine Value="4"/>
         <CursorPos X="42" Y="25"/>
@@ -184,7 +184,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form8"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="13"/>
+        <EditorIndex Value="15"/>
         <WindowIndex Value="1"/>
         <TopLine Value="3"/>
         <CursorPos X="45" Y="19"/>
@@ -197,7 +197,7 @@
         <ComponentName Value="Form9"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="1"/>
         <TopLine Value="5"/>
         <CursorPos X="32" Y="23"/>
@@ -221,7 +221,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form11"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="12"/>
+        <EditorIndex Value="14"/>
         <WindowIndex Value="1"/>
         <TopLine Value="4"/>
         <CursorPos X="71" Y="40"/>
@@ -237,7 +237,7 @@
       </Unit17>
       <Unit18>
         <Filename Value="descriptivestatistics.pas"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="13"/>
         <WindowIndex Value="1"/>
         <TopLine Value="134"/>
         <CursorPos X="24" Y="160"/>
@@ -261,7 +261,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form12"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="12"/>
         <WindowIndex Value="1"/>
         <TopLine Value="4"/>
         <CursorPos X="15" Y="30"/>
@@ -278,7 +278,7 @@
       </Unit22>
       <Unit23>
         <Filename Value="pingsend.pas"/>
-        <EditorIndex Value="15"/>
+        <EditorIndex Value="17"/>
         <WindowIndex Value="1"/>
         <UsageCount Value="100"/>
         <Loaded Value="True"/>
@@ -294,7 +294,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form13"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="17"/>
+        <EditorIndex Value="19"/>
         <WindowIndex Value="1"/>
         <TopLine Value="50"/>
         <CursorPos X="26" Y="72"/>
@@ -343,15 +343,15 @@
         <ResourceBaseClass Value="Form"/>
         <TopLine Value="24"/>
         <CursorPos X="28" Y="41"/>
-        <UsageCount Value="176"/>
+        <UsageCount Value="178"/>
       </Unit30>
       <Unit31>
         <Filename Value="synaser.pas"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="1"/>
         <TopLine Value="916"/>
         <CursorPos X="12" Y="931"/>
-        <UsageCount Value="67"/>
+        <UsageCount Value="68"/>
         <Loaded Value="True"/>
       </Unit31>
       <Unit32>
@@ -412,143 +412,163 @@
       </Unit39>
       <Unit40>
         <Filename Value="hblas.pas"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="1"/>
         <TopLine Value="15"/>
         <CursorPos X="6" Y="30"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit40>
       <Unit41>
         <Filename Value="reflections.pas"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="10"/>
         <WindowIndex Value="1"/>
         <TopLine Value="214"/>
         <CursorPos X="5" Y="229"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit41>
+      <Unit42>
+        <Filename Value="..\..\..\..\..\Developer\lazarus\lcl\lclclasses.pp"/>
+        <UnitName Value="LCLClasses"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="10" Y="26"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="..\..\..\..\..\Developer\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="36" Y="38"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit43>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3597" Column="29" TopLine="3564"/>
+        <Caret Line="744" Column="3" TopLine="742"/>
       </Position1>
       <Position2>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2140" Column="3" TopLine="2121"/>
+        <Caret Line="743" Column="3" TopLine="741"/>
       </Position2>
       <Position3>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2159" Column="17" TopLine="2127"/>
+        <Caret Line="1500" Column="3" TopLine="1498"/>
       </Position3>
       <Position4>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2267" Column="20" TopLine="2238"/>
+        <Caret Line="1499" Column="3" TopLine="1497"/>
       </Position4>
       <Position5>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2778" Column="26" TopLine="2747"/>
+        <Caret Line="1498" Column="3" TopLine="1496"/>
       </Position5>
       <Position6>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2879" Column="19" TopLine="2845"/>
+        <Caret Line="1026" Column="29" TopLine="1007"/>
       </Position6>
       <Position7>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2883" Column="26" TopLine="2868"/>
+        <Caret Line="1124" Column="36" TopLine="1105"/>
       </Position7>
       <Position8>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2912" Column="39" TopLine="2878"/>
+        <Caret Line="1140" Column="51" TopLine="1114"/>
       </Position8>
       <Position9>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2943" Column="32" TopLine="2907"/>
+        <Caret Line="1161" Column="30" TopLine="1139"/>
       </Position9>
       <Position10>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3452" Column="36" TopLine="3418"/>
+        <Caret Line="1166" Column="50" TopLine="1145"/>
       </Position10>
       <Position11>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3555" Column="34" TopLine="3555"/>
+        <Caret Line="1201" Column="24" TopLine="1182"/>
       </Position11>
       <Position12>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2153" Column="56" TopLine="2127"/>
+        <Caret Line="1321" Column="41" TopLine="1298"/>
       </Position12>
       <Position13>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2156" Column="51" TopLine="2127"/>
+        <Caret Line="1327" Column="36" TopLine="1306"/>
       </Position13>
       <Position14>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2155" Column="51" TopLine="2127"/>
+        <Caret Line="1429" Column="19" TopLine="1410"/>
       </Position14>
       <Position15>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="4661" Column="50" TopLine="4649"/>
+        <Caret Line="1449" Column="74" TopLine="1439"/>
       </Position15>
       <Position16>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="4660" Column="50" TopLine="4648"/>
+        <Caret Line="1507" Column="21" TopLine="1488"/>
       </Position16>
       <Position17>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="4659" Column="50" TopLine="4647"/>
+        <Caret Line="1515" Column="44" TopLine="1505"/>
       </Position17>
       <Position18>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3015" Column="26" TopLine="2993"/>
+        <Caret Line="2138" TopLine="2119"/>
       </Position18>
       <Position19>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3313" Column="33" TopLine="3301"/>
+        <Caret Line="2255" TopLine="2233"/>
       </Position19>
       <Position20>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3583" TopLine="3563"/>
+        <Caret Line="2758" TopLine="2740"/>
       </Position20>
       <Position21>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="4650" Column="26" TopLine="4621"/>
+        <Caret Line="2776" TopLine="2758"/>
       </Position21>
       <Position22>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2134" Column="46" TopLine="2119"/>
+        <Caret Line="2793" TopLine="2764"/>
       </Position22>
       <Position23>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2167" Column="40" TopLine="2135"/>
+        <Caret Line="2825" TopLine="2798"/>
       </Position23>
       <Position24>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2449" Column="29" TopLine="2417"/>
+        <Caret Line="2841" TopLine="2823"/>
       </Position24>
       <Position25>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2666" Column="22" TopLine="2634"/>
+        <Caret Line="2859" TopLine="2841"/>
       </Position25>
       <Position26>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2758" Column="40" TopLine="2723"/>
+        <Caret Line="2874" TopLine="2856"/>
       </Position26>
       <Position27>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3010" Column="53" TopLine="2982"/>
+        <Caret Line="3513" Column="3" TopLine="3494"/>
       </Position27>
       <Position28>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3254" Column="50" TopLine="3234"/>
+        <Caret Line="3511" Column="18" TopLine="3494"/>
       </Position28>
       <Position29>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="744" Column="3" TopLine="742"/>
+        <Caret Line="5319" Column="3" TopLine="5301"/>
       </Position29>
       <Position30>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="743" Column="3" TopLine="741"/>
+        <Caret Line="5318" Column="3" TopLine="5300"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
@@ -578,35 +598,35 @@
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="673"/>
+        <Line Value="670"/>
       </Item1>
       <Item2>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="608"/>
+        <Line Value="605"/>
       </Item2>
       <Item3>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="1120"/>
+        <Line Value="1117"/>
       </Item3>
       <Item4>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="1425"/>
+        <Line Value="1422"/>
       </Item4>
       <Item5>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="3356"/>
+        <Line Value="3306"/>
       </Item5>
       <Item6>
         <Kind Value="bpkSource"/>
@@ -620,42 +640,42 @@
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="3628"/>
+        <Line Value="3578"/>
       </Item7>
       <Item8>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="3588"/>
+        <Line Value="3538"/>
       </Item8>
       <Item9>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="858"/>
+        <Line Value="855"/>
       </Item9>
       <Item10>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="3640"/>
+        <Line Value="3590"/>
       </Item10>
       <Item11>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="3675"/>
+        <Line Value="3625"/>
       </Item11>
       <Item12>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="471"/>
+        <Line Value="468"/>
       </Item12>
     </BreakPoints>
     <Watches Count="3">
