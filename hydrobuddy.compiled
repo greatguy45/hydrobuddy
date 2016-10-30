@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Compiler Value="/usr/local/bin/ppc386" Date="1447509028"/>
-  <Params Value=" -MObjFPC -Scgi -O1 -gw -gl  -k-framework -kCarbon -k-framework -kOpenGL -k-dylib_file -k/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib:/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib -l -vewnhibq -Fu/Developer/lazarus/components/tachart/lib/i386-darwin/carbon -Fu/Developer/lazarus/components/ideintf/units/i386-darwin/carbon -Fu/Developer/lazarus/components/lazcontrols/lib/i386-darwin/carbon -Fu/Developer/lazarus/lcl/units/i386-darwin/carbon -Fu/Developer/lazarus/lcl/units/i386-darwin -Fu/Developer/lazarus/components/lazutils/lib/i386-darwin -Fu/Developer/lazarus/packager/units/i386-darwin -Fu/Volumes/TRANSCEND/Dev/Lazarus/hydrobuddy/ -dLCL -dLCLcarbon hydrobuddy.lpr"/>
-</CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1413311941"/>
+  <Params Value=" -MObjFPC -Scgi -O1 -g -gl -vewnhi -Fl/opt/gnome/lib -Fu/usr/lib/lazarus/1.2.4/components/tachart/lib/i386-linux/gtk2 -Fu/usr/lib/lazarus/1.2.4/components/ideintf/units/i386-linux/gtk2 -Fu/usr/lib/lazarus/1.2.4/components/lazcontrols/lib/i386-linux/gtk2 -Fu/usr/lib/lazarus/1.2.4/lcl/units/i386-linux/gtk2 -Fu/usr/lib/lazarus/1.2.4/lcl/units/i386-linux -Fu/usr/lib/lazarus/1.2.4/components/lazutils/lib/i386-linux -Fu/usr/lib/lazarus/1.2.4/packager/units/i386-linux -Fu/home/wahyu/Lazarus/hydrobuddy_v1_50_src/ -l -dLCL -dLCLgtk2 hydrobuddy.lpr"/>
+</CONFIG>

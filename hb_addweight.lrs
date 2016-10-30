@@ -6,12 +6,12 @@ LazarusResources.Add('TForm4','FORMDATA',[
   +#18'VertScrollBar.Page'#3#161#0#19'VertScrollBar.Range'#3#145#0#11'BorderSty'
   +'le'#7#12'bsToolWindow'#7'Caption'#6#26'Set Mass of Substance Used'#12'Clien'
   +'tHeight'#3#174#0#11'ClientWidth'#3#252#1#9'FormStyle'#7#11'fsStayOnTop'#10
-  +'LCLVersion'#6#7'1.2.4.0'#0#6'TLabel'#6'Label1'#4'Left'#2'('#6'Height'#2#15#3
-  +'Top'#2'@'#5'Width'#3#180#0#7'Caption'#6#26'Mass of Substance Used (g)'#11'P'
-  +'arentColor'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2'('#6'Height'#2' '#3'Top'#2
-  +#24#5'Width'#3#144#0#8'AutoSize'#8#7'Caption'#6#6'------'#11'ParentColor'#8#8
-  +'WordWrap'#9#0#0#5'TEdit'#5'Edit1'#4'Left'#2'0'#6'Height'#2#25#3'Top'#2'`'#5
-  +'Width'#2'x'#8'TabOrder'#2#0#4'Text'#6#1'0'#0#0#7'TButton'#7'Button1'#4'Left'
-  +#2'@'#6'Height'#2#25#3'Top'#3#136#0#5'Width'#2'K'#7'Caption'#6#2'Ok'#7'OnCli'
-  +'ck'#7#12'Button1Click'#8'TabOrder'#2#1#0#0#0
+  +'LCLVersion'#6#7'1.2.4.0'#0#6'TLabel'#14'Lbl_MassOption'#4'Left'#2'('#6'Heig'
+  +'ht'#2#15#3'Top'#2'H'#5'Width'#3#158#0#7'Caption'#6#22'Mass of Substance Use'
+  +'d'#11'ParentColor'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2'('#6'Height'#2' '#3
+  +'Top'#2#24#5'Width'#3#144#0#8'AutoSize'#8#7'Caption'#6#6'------'#11'ParentCo'
+  +'lor'#8#8'WordWrap'#9#0#0#5'TEdit'#5'Edit1'#4'Left'#2'0'#6'Height'#2#25#3'To'
+  +'p'#2'`'#5'Width'#2'x'#8'TabOrder'#2#0#4'Text'#6#1'0'#0#0#7'TButton'#7'Butto'
+  +'n1'#4'Left'#2'@'#6'Height'#2#25#3'Top'#3#136#0#5'Width'#2'K'#7'Caption'#6#2
+  +'Ok'#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#1#0#0#0
 ]);

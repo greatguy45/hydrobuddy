@@ -13,12 +13,12 @@ object Form4: TForm4
   ClientWidth = 508
   FormStyle = fsStayOnTop
   LCLVersion = '1.2.4.0'
-  object Label1: TLabel
+  object Lbl_MassOption: TLabel
     Left = 40
     Height = 15
-    Top = 64
-    Width = 180
-    Caption = 'Mass of Substance Used (g)'
+    Top = 72
+    Width = 158
+    Caption = 'Mass of Substance Used'
     ParentColor = False
   end
   object Label2: TLabel

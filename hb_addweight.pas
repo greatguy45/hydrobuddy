@@ -15,7 +15,7 @@ type
   TForm4 = class(TForm)
     Button1: TButton;
     Edit1: TEdit;
-    Label1: TLabel;
+    Lbl_MassOption: TLabel;
     Label2: TLabel;
     procedure Button1Click(Sender: TObject);
   private
