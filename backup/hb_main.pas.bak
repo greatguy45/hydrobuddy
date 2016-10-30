@@ -55,9 +55,6 @@ type
     Chart1LineSeries4: TLineSeries;
     CheckBox1:  TCheckBox;
     CheckBox2: TCheckBox;
-    ChkBox_DisablePopUp: TCheckBox;
-    CheckBox4: TCheckBox;
-    CheckBox5: TCheckBox;
     CheckBox6: TCheckBox;
     ComboBox1:  TComboBox;
     ComboBox2:  TComboBox;
@@ -2755,7 +2752,7 @@ if RadioButton13.Checked then
 
            begin
 
-           //ShowMessage(name_array[i][0] + ' is not used within the final result. Please remove it to obtain a better solution');
+           //ShowMessage(name_array[i][0] + ' is not used within the final result.');
            Form1.Memo1.Lines.Add(name_array[i][0] + ' is not used within the final result.');
            end;
 
@@ -2997,37 +2994,22 @@ if RadioButton13.Checked then
 
 
     // check magnitude of instrumental and gross error
-
-       // check for popup disabling
-    if ChkBox_DisablePopUp.Checked = false then
-
-    begin
-
     for i := 0 to 15 do
-
     begin
-
-    writeln(all_element_names[i] + ' ' + FloatToStr(gross_error[i]) ) ;
-
-
       if (instrumental_error[i] > 100) then
       begin
-        {ShowMessage('Instrumental error is too high on ' + all_element_names[i] +
-          ', prepare more solution volume or a more concentrated solution to reduce this error');   }
         Form1.Memo1.Lines.Add('Instrumental error is too high on ' + all_element_names[i] +
           ', prepare more solution volume or a more concentrated solution to reduce this error');
       end;
 
       if (gross_error[i] > 100) then
       begin
-        {ShowMessage('Gross errors on ' + all_element_names[i] +
-          ' are too high, probably an adequate solution was NOT found. Please try a different substance combination');    }
         Form1.Memo1.Lines.Add('Gross errors on ' + all_element_names[i] +
-          ' are too high, probably an adequate solution was NOT found. Please try a different substance combination');
+          ' are too high.');
       end;
     end;
 
-    end ;
+
 
     // display gross error in the form
 
@@ -3593,9 +3575,7 @@ if RadioButton13.Checked then
     hb_ratios.Form14.StringGrid1.Cells[0, hb_ratios.Form14.StringGrid1.RowCount - 1] :=('Ca: Mg') ;
     hb_ratios.Form14.StringGrid1.Cells[1, hb_ratios.Form14.StringGrid1.RowCount - 2] :=(getratio('Ca', 'Mg', 'K', 2) ) ;
 
-  if ChkBox_DisablePopUp.Checked = false then
-  ShowMessage('Calculation carried out successfully :o)');
-
+  Form1.Memo1.Lines.Add('Calculation carried out successfully :o)');
 
 end;
 
@@ -4639,7 +4619,7 @@ begin
 
   SetLength(answer, 3) ;
 
-  if CheckBox4.Checked then
+{  if CheckBox4.Checked then
   answer[0] := 'UPDATE = 1'
   else
   answer[0] := 'UPDATE = 0' ;
@@ -4649,20 +4629,20 @@ begin
   else
   answer[1] := 'POPUP = 0' ;
 
-  if CheckBox5.Checked then
+ if CheckBox5.Checked then
   answer[2] := 'SMALLWINDOW = 1'
   else
-  answer[2] := 'SMALLWINDOW = 0' ;
+  answer[2] := 'SMALLWINDOW = 0' ;     }
 
   update_ini :=  TStringList.Create;
 
-  update_ini.Add(answer[0]) ;
+  //update_ini.Add(answer[0]) ;
 
-  update_ini.Add(answer[1]) ;
+  //update_ini.Add(answer[1]) ;
 
-  update_ini.Add(answer[2]) ;
+  //update_ini.Add(answer[2]) ;
 
-  update_ini.SaveToFile('update.ini');
+  //update_ini.SaveToFile('update.ini');
 
   update_ini.Free ;
 
