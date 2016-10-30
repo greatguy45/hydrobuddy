@@ -34,7 +34,6 @@ type
     Button23: TButton;
     Button24: TButton;
     Button25: TButton;
-    Button26: TBitBtn;
     BtnAddRawSaltForCalc: TBitBtn;
     BtnRemoveSaltFromCalc: TBitBtn;
     Button29: TBitBtn;
@@ -77,6 +76,9 @@ type
     Edit23:     TEdit;
     Edit19:     TEdit;
     Edit15:     TEdit;
+    Label28: TLabel;
+    StringGrid_Contribution: TStringGrid;
+    StringGrid_Result: TStringGrid;
     TxtBox_ConcFactor:     TEdit;
     Edit2:      TEdit;
     Edit3:      TEdit;
@@ -281,7 +283,6 @@ type
     procedure RadioButton8Change(Sender: TObject);
     procedure RadioButton9Change(Sender: TObject);
     procedure BtnRemoveSaltFromCalcClick(Sender: TObject);
-    procedure StringGrid2EditingDone(Sender: TObject);
     procedure StringGrid3SelectCell(Sender: TObject; aCol, aRow: Integer;
       var CanSelect: Boolean);
     procedure TabSheet1ContextPopup(Sender: TObject; MousePos: TPoint;
@@ -748,9 +749,9 @@ end;
 
 procedure TForm1.Button26Click(Sender: TObject);
 begin
-  OpenURL('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6YR6X5AAEGBGJ');
 
 end;
+
 
 procedure TForm1.BtnAddRawSaltForCalcClick(Sender: TObject);
 var
@@ -2146,11 +2147,25 @@ begin
   StringGrid2.ColWidths[1] := 180;
   StringGrid2.ColWidths[2] := 170;
   StringGrid2.ColWidths[3] := 110;
+
+  //New StringGrid
+  //StringGrid_Contribution.Clean;
+  StringGrid_Result.Clean;
+  StringGrid_Result.RowCount:= 1;
+  StringGrid_Result.ColWidths[0] := 150;
+  StringGrid_Result.ColWidths[1] := 130;
+  StringGrid_Result.ColWidths[2] := 80;
+  StringGrid_Result.ColWidths[3] := 60;
+
   hb_ratios.Form14.StringGrid1.Clean;
   hb_ratios.Form14.StringGrid1.RowCount := 1 ;
   hb_persubstance.Form9.StringGrid1.Clean;
   hb_persubstance.Form9.StringGrid1.RowCount := 1 ;
   hb_stockanalysis.Form8.StringGrid1.Clean ;
+
+  StringGrid_Contribution.Clean;
+  StringGrid_Contribution.RowCount := 1 ;
+
 
   //clear notebox from previous message
   Form1.Memo1.Lines.Clear;
@@ -2248,6 +2263,8 @@ begin
   // set size of string grid for solutions
 
   StringGrid2.RowCount := arraysize + 1 ;
+
+  StringGrid_Result.RowCount := arraysize + 1 ;
 
 
   // set values for the concentration factor according to selected units
@@ -2758,6 +2775,8 @@ if RadioButton13.Checked then
 
         StringGrid2.Cells[1,i+1] := (name_array[i][1]);
 
+        StringGrid_Result.Cells[1,i+1] := (name_array[i][1]);
+
         //determine volume unit for description label
 
         if RadioButton2.Checked then
@@ -2776,10 +2795,17 @@ if RadioButton13.Checked then
 
           StringGrid2.Cells[0,i+1] := (name_array[i][0]);
 
+          StringGrid_Result.Cells[0,i+1] := (name_array[i][0]);
+
           if (IsLiquid[0,i] = 0)         or
              (CheckBox6.Checked = false) then
+             begin
 
-          StringGrid2.Cells[2,i+1] := (FloatToStr(round2(solutions[i] * weight_factor+ preloaded_weight[i] * weight_factor, 3)) );
+              StringGrid2.Cells[2,i+1] := (FloatToStr(round2(solutions[i] * weight_factor+ preloaded_weight[i] * weight_factor, 3)) );
+
+              StringGrid_Result.Cells[2,i+1] := (FloatToStr(round2(solutions[i] * weight_factor+ preloaded_weight[i] * weight_factor, 3)) );
+
+             end;
 
           if (IsLiquid[0,i] = 1)         and
              (CheckBox6.Checked)         then
@@ -2788,9 +2814,13 @@ if RadioButton13.Checked then
 
              StringGrid2.Cells[2,i+1] := (FloatToStr(round2((1/IsLiquid[1,i])*solutions[i] * weight_factor+ preloaded_weight[i] * weight_factor, 3))+ ' mL');
 
+             StringGrid_Result.Cells[2,i+1] := (FloatToStr(round2((1/IsLiquid[1,i])*solutions[i] * weight_factor+ preloaded_weight[i] * weight_factor, 3))+ ' mL');
+
              end;
 
           StringGrid2.Cells[3,i+1] := (FloatToStr(round2(0.001 * solutions[i] * cost[i]+ 0.001*preloaded_weight[i]* cost[i], 1)));
+
+          StringGrid_Result.Cells[3,i+1] := (FloatToStr(round2(0.001 * solutions[i] * cost[i]+ 0.001*preloaded_weight[i]* cost[i], 1)));
 
           Label20.Caption := 'Values calculated for the preparation of ' +
             Edit19.Text + ' ' + volumeunit;
@@ -2807,22 +2837,31 @@ if RadioButton13.Checked then
 
           StringGrid2.Cells[0,i+1] := (ConcTypeArray[i] + ' - ' + name_array[i][0]);
 
+          StringGrid_Result.Cells[0,i+1] := (ConcTypeArray[i] + ' - ' + name_array[i][0]);
+
            if (IsLiquid[0,i] = 0)         or
              (CheckBox6.Checked = false) then
+             begin
+             StringGrid2.Cells[2,i+1] :=(FloatToStr(
+              round2(solutions[i] * StrtoFloat(TxtBox_ConcFactor.Text) * weight_factor +preloaded_weight[i]* weight_factor*StrtoFloat(TxtBox_ConcFactor.Text), 3)));
 
-          StringGrid2.Cells[2,i+1] :=(FloatToStr(
-            round2(solutions[i] * StrtoFloat(TxtBox_ConcFactor.Text) * weight_factor +preloaded_weight[i]* weight_factor*StrtoFloat(TxtBox_ConcFactor.Text), 3)));
+             StringGrid_Result.Cells[2,i+1] :=(FloatToStr(
+              round2(solutions[i] * StrtoFloat(TxtBox_ConcFactor.Text) * weight_factor +preloaded_weight[i]* weight_factor*StrtoFloat(TxtBox_ConcFactor.Text), 3)));
+             end;
 
            if (IsLiquid[0,i] = 1)         and
              (CheckBox6.Checked)         then
 
              begin
+               StringGrid2.Cells[2,i+1] :=(FloatToStr(round2((1/IsLiquid[1,i])*StrtoFloat(TxtBox_ConcFactor.Text)*solutions[i] * weight_factor+ preloaded_weight[i] * weight_factor, 3))+ ' mL');
 
-           StringGrid2.Cells[2,i+1] :=(FloatToStr(round2((1/IsLiquid[1,i])*StrtoFloat(TxtBox_ConcFactor.Text)*solutions[i] * weight_factor+ preloaded_weight[i] * weight_factor, 3))+ ' mL');
-
+               StringGrid_Result.Cells[2,i+1] :=(FloatToStr(round2((1/IsLiquid[1,i])*StrtoFloat(TxtBox_ConcFactor.Text)*solutions[i] * weight_factor+ preloaded_weight[i] * weight_factor, 3))+ ' mL');
              end;
 
           StringGrid2.Cells[3,i+1] :=(FloatToStr(
+            round2(0.001 * solutions[i] * cost[i] * StrtoFloat(TxtBox_ConcFactor.Text)+0.001*preloaded_weight[i] * cost[i]*StrtoFloat(TxtBox_ConcFactor.Text), 1)));
+
+          StringGrid_Result.Cells[3,i+1] :=(FloatToStr(
             round2(0.001 * solutions[i] * cost[i] * StrtoFloat(TxtBox_ConcFactor.Text)+0.001*preloaded_weight[i] * cost[i]*StrtoFloat(TxtBox_ConcFactor.Text), 1)));
 
           Label20.Caption := 'Values calculated for the preparation of ' +
@@ -2840,6 +2879,8 @@ if RadioButton13.Checked then
       begin
 
         StringGrid2.Cells[1,i+1] := (name_array[i][1]);
+
+        StringGrid_Result.Cells[1,i+1] := (name_array[i][1]);
 
         //determine volume unit for description label
 
@@ -2861,6 +2902,10 @@ if RadioButton13.Checked then
           StringGrid2.Cells[2,i+1] := (FloatToStr(round2( preloaded_weight[i], 3)));
           StringGrid2.Cells[3,i+1] :=(FloatToStr(round2(0.001*preloaded_weight[i]* cost[i], 1)));
 
+          StringGrid_Result.Cells[0,i+1] := (name_array[i][0]);
+          StringGrid_Result.Cells[2,i+1] := (FloatToStr(round2( preloaded_weight[i], 3)));
+          StringGrid_Result.Cells[3,i+1] :=(FloatToStr(round2(0.001*preloaded_weight[i]* cost[i], 1)));
+
           Label20.Caption := 'Values calculated for the preparation of ' +
             Edit19.Text + ' ' + volumeunit;
 
@@ -2879,6 +2924,15 @@ if RadioButton13.Checked then
 
           StringGrid2.Cells[3,i+1] :=(FloatToStr(
             round2(0.001*preloaded_weight[i] * cost[i]*StrtoFloat(TxtBox_ConcFactor.Text), 1)));
+
+          StringGrid_Result.Cells[0,i+1] :=(ConcTypeArray[i] + ' - ' + name_array[i][0]);
+
+          StringGrid_Result.Cells[2,i+1] :=(FloatToStr(
+            round2(preloaded_weight[i]*StrtoFloat(TxtBox_ConcFactor.Text), 3)));
+
+          StringGrid_Result.Cells[3,i+1] :=(FloatToStr(
+            round2(0.001*preloaded_weight[i] * cost[i]*StrtoFloat(TxtBox_ConcFactor.Text), 1)));
+
 
           Label20.Caption := 'Values calculated for the preparation of ' +
             Edit19.Text + ' ' + volumeunit + ' of A and ' + Edit19.Text + ' ' +
@@ -2901,10 +2955,14 @@ if RadioButton13.Checked then
 
       StringGrid1.Cells[0,i+1] := all_element_names[i];
 
+      //StringGrid_Contribution.Cells[0,i+1] := all_element_names[i];
+
       test := waterquality[i];;
 
       if prev_conc = 'ppm' then
       StringGrid1.Cells[1,i+1] := (FloatToStr(round2((1/conc_factor[i])*(Result[i] + test), 3)));
+
+      //StringGrid_Contribution.Cells[1,i+1] := (FloatToStr(round2((1/conc_factor[i])*(Result[i] + test), 3)));
 
       if prev_conc <> 'ppm' then
       StringGrid1.Cells[1,i+1] := (FloatToStrF((1/conc_factor[i])*(Result[i] + test), ffExponent, 4, 2));
@@ -2912,6 +2970,13 @@ if RadioButton13.Checked then
       StringGrid1.Cells[2,i+1] := (FloatToStr(round2(gross_error[i], 1)) + '%');
 
       StringGrid1.Cells[3,i+1] :=('+/- ' + FloatToStr(round2(instrumental_error[i], 1)) + '%');
+
+      //StringGrid_Contribution.Cells[1,i+1] := (FloatToStrF((1/conc_factor[i])*(Result[i] + test), ffExponent, 4, 2));
+
+      //StringGrid_Contribution.Cells[2,i+1] := (FloatToStr(round2(gross_error[i], 1)) + '%');
+
+      //StringGrid_Contribution.Cells[3,i+1] :=('+/- ' + FloatToStr(round2(instrumental_error[i], 1)) + '%');
+
 
       if prev_conc = 'ppm' then
       (FindComponent('RLabel' + IntToStr(i+1)) as TLabel).Caption := Format('%*.*f', [0, 2, round2((1/conc_factor[i])*Result[i] + test, 3) ]);
@@ -3138,19 +3203,31 @@ if RadioButton13.Checked then
         begin
 
           hb_persubstance.Form9.StringGrid1.RowCount := hb_persubstance.Form9.StringGrid1.RowCount + 1 ;
-
           hb_persubstance.Form9.StringGrid1.Cells[0, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(name_array[i][1]);
           hb_persubstance.Form9.StringGrid1.Cells[1, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(all_element_names[j]);
+
+          StringGrid_Contribution.RowCount := hb_persubstance.Form9.StringGrid1.RowCount + 1 ;
+          StringGrid_Contribution.Cells[0, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(name_array[i][1]);
+          StringGrid_Contribution.Cells[1, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(all_element_names[j]);
 
           temp3 := solutions[i] * all_element_contributions[j][i]+preloaded_weight[i]*all_element_contributions[j][j] ;
 
            if prev_conc = 'ppm' then
-          hb_persubstance.Form9.StringGrid1.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(
+           begin
+           hb_persubstance.Form9.StringGrid1.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(
             FloattoStr(round2((1/conc_factor[j])*temp3, 3)));
 
+            StringGrid_Contribution.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(
+            FloattoStr(round2((1/conc_factor[j])*temp3, 3)));
+           end;
+
             if prev_conc <> 'ppm' then
+            begin
             hb_persubstance.Form9.StringGrid1.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(
             FloattoStrF((1/conc_factor[j])*temp3, ffExponent, 4, 2));
+            StringGrid_Contribution.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(
+            FloattoStrF((1/conc_factor[j])*temp3, ffExponent, 4, 2));
+            end;
 
         end;
 
@@ -3159,19 +3236,30 @@ if RadioButton13.Checked then
         begin
 
           hb_persubstance.Form9.StringGrid1.RowCount := hb_persubstance.Form9.StringGrid1.RowCount + 1 ;
-
           hb_persubstance.Form9.StringGrid1.Cells[0, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(name_array[i][1]);
           hb_persubstance.Form9.StringGrid1.Cells[1, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(all_element_names[j]);
+
+          StringGrid_Contribution.RowCount := hb_persubstance.Form9.StringGrid1.RowCount + 1 ;
+          StringGrid_Contribution.Cells[0, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(name_array[i][1]);
+          StringGrid_Contribution.Cells[1, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(all_element_names[j]);
 
           temp3 := preloaded_weight[i]*all_element_contributions[j][i] ;
 
           if prev_conc = 'ppm' then
+          begin
           hb_persubstance.Form9.StringGrid1.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(
             FloattoStr(round2((1/conc_factor[j])*temp3, 3)));
+          StringGrid_Contribution.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(
+            FloattoStr(round2((1/conc_factor[j])*temp3, 3)));
+          end;
 
             if prev_conc <> 'ppm' then
+            begin
             hb_persubstance.Form9.StringGrid1.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(
             FloattoStrF((1/conc_factor[j])*temp3, ffExponent, 4, 2));
+            StringGrid_Contribution.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(
+            FloattoStrF((1/conc_factor[j])*temp3, ffExponent, 4, 2));
+            end;
 
         end;
 
@@ -3314,23 +3402,36 @@ if RadioButton13.Checked then
         begin
 
           hb_persubstance.Form9.StringGrid1.RowCount := hb_persubstance.Form9.StringGrid1.RowCount + 1 ;
-
           hb_persubstance.Form9.StringGrid1.Cells[0, hb_persubstance.Form9.StringGrid1.RowCount-1] := (name_array[i][1]);
           hb_persubstance.Form9.StringGrid1.Cells[1, hb_persubstance.Form9.StringGrid1.RowCount-1] :=(varnames[j]);
 
-          if prev_conc = 'ppm' then
+          StringGrid_Contribution.RowCount := hb_persubstance.Form9.StringGrid1.RowCount + 1 ;
+          StringGrid_Contribution.Cells[0, hb_persubstance.Form9.StringGrid1.RowCount-1] := (name_array[i][1]);
+          StringGrid_Contribution.Cells[1, hb_persubstance.Form9.StringGrid1.RowCount-1] :=(varnames[j]);
 
+          if prev_conc = 'ppm' then
+          begin
           hb_persubstance.Form9.StringGrid1.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount-1] :=(
             FloattoStr(round2((1 / weight_factor) * MyDbf.FieldByName('Weight').AsFloat *
             0.01 * MyDbf.FieldByName(varnames[j]).AsFloat * MyDbf.FieldByName(
             'Purity').AsFloat / Volume, 3)));
+          StringGrid_Contribution.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount-1] :=(
+            FloattoStr(round2((1 / weight_factor) * MyDbf.FieldByName('Weight').AsFloat *
+            0.01 * MyDbf.FieldByName(varnames[j]).AsFloat * MyDbf.FieldByName(
+            'Purity').AsFloat / Volume, 3)));
+          end;
 
           if prev_conc <> 'ppm' then
-
+          begin
           hb_persubstance.Form9.StringGrid1.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount-1] :=(
             FloattoStrF((1/conc_factor[j])*(1 / weight_factor) * MyDbf.FieldByName('Weight').AsFloat *
             0.01 * MyDbf.FieldByName(varnames[j]).AsFloat * MyDbf.FieldByName(
             'Purity').AsFloat / Volume, ffExponent, 4, 2));
+          StringGrid_Contribution.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount-1] :=(
+            FloattoStrF((1/conc_factor[j])*(1 / weight_factor) * MyDbf.FieldByName('Weight').AsFloat *
+            0.01 * MyDbf.FieldByName(varnames[j]).AsFloat * MyDbf.FieldByName(
+            'Purity').AsFloat / Volume, ffExponent, 4, 2));
+          end;
 
 
 
@@ -3338,14 +3439,14 @@ if RadioButton13.Checked then
 
       end;
 
-      StringGrid2.RowCount := i+2 ;
+      StringGrid_Result.RowCount := i+2 ;
 
-      StringGrid2.Cells[0,i+1] := (name_array[i][0]);
-      StringGrid2.Cells[1,i+1] := (name_array[i][1]);
-      StringGrid2.Cells[3,i+1] := (FloattoStr(
+      StringGrid_Result.Cells[0,i+1] := (name_array[i][0]);
+      StringGrid_Result.Cells[1,i+1] := (name_array[i][1]);
+      StringGrid_Result.Cells[3,i+1] := (FloattoStr(
         round2(MyDbf.FieldByName('Weight').AsFloat * MyDbf.FieldByName('Cost').AsFloat * 0.001 *
         (1 / weight_factor), 1)));
-      StringGrid2.Cells[2,i+1] := (MyDbf.FieldByName('Weight').AsString);
+      StringGrid_Result.Cells[2,i+1] := (MyDbf.FieldByName('Weight').AsString);
 
 
       i := i + 1;
@@ -3370,12 +3471,16 @@ if RadioButton13.Checked then
 
           StringGrid1.Cells[0,i] := (FindComponent('Label' + IntToStr(i)) as TLabel).Caption;
 
+          //StringGrid_Contribution.Cells[0,i] := (FindComponent('Label' + IntToStr(i)) as TLabel).Caption;
+
           if prev_conc = 'ppm' then
 
           begin
 
 
           StringGrid1.Cells[1,i] := (FloatToStr(round2(Result[j] + waterquality[i - 1], 3)));
+
+          //StringGrid_Contribution.Cells[1,i] := (FloatToStr(round2(Result[j] + waterquality[i - 1], 3)));
 
           (FindComponent('RLabel' + IntToStr(i)) as TLabel).Caption :=
             FloatToStr(round2(Result[j] + waterquality[i - 1], 3));
@@ -3447,16 +3552,16 @@ if RadioButton13.Checked then
 
   //check and assign any empty elements in StringGrid
 
-  for i := 0 to StringGrid2.RowCount - 2 do
+  for i := 0 to StringGrid_Result.RowCount - 2 do
 
   begin
 
-    if (StringGrid2.Cells[0,i+1]) = '' then
+    if (StringGrid_Result.Cells[0,i+1]) = '' then
     begin
-    StringGrid2.Cells[0,i+1] := name_array[i][0] ;
-    StringGrid2.Cells[1,i+1] := name_array[i][1] ;
-    StringGrid2.Cells[2,i+1] := '0' ;
-    StringGrid2.Cells[3,i+1] := '0' ;
+    StringGrid_Result.Cells[0,i+1] := name_array[i][0] ;
+    StringGrid_Result.Cells[1,i+1] := name_array[i][1] ;
+    StringGrid_Result.Cells[2,i+1] := '0' ;
+    StringGrid_Result.Cells[3,i+1] := '0' ;
     end;
 
   end;
@@ -3465,11 +3570,11 @@ if RadioButton13.Checked then
 
   test := 0;
 
-  for i := 0 to StringGrid2.RowCount - 2 do
+  for i := 0 to StringGrid_Result.RowCount - 2 do
 
   begin
 
-    test := StrtoFloat(StringGrid2.Cells[3,i+1]) + test;
+    test := StrtoFloat(StringGrid_Result.Cells[3,i+1]) + test;
 
   end;
 
@@ -4798,8 +4903,8 @@ end;
 procedure TForm1.MenuItem2Click(Sender: TObject);
 begin
 
-  StringGrid2.CopyToClipboard(true);
-  StringGrid2.CopyToClipboard ;
+  StringGrid_Result.CopyToClipboard(true);
+  StringGrid_Result.CopyToClipboard ;
 
 end;
 
@@ -4817,7 +4922,7 @@ var
 begin
 
 StringGrid1.Clean ;
-StringGrid2.Clean ;
+StringGrid_Result.Clean ;
 {
 hb_ratios.Form14.StringGrid1.Clean;
 hb_persubstance.Form9.StringGrid1.Clean;
@@ -5230,7 +5335,7 @@ end;
 procedure TForm1.RadioButton8Change(Sender: TObject);
 begin
 
-  StringGrid2.Cells[2,0]  := 'Mass (g)';
+  StringGrid_Result.Cells[2,0]  := 'Mass (g)';
   hb_addweight.Form4.Label1.Caption := 'Mass of Substance Used (g)';
   cleanresults;
 
@@ -5239,7 +5344,7 @@ end;
 procedure TForm1.RadioButton9Change(Sender: TObject);
 begin
 
-  StringGrid2.Cells[2,0]  := 'Mass (oz)';
+  StringGrid_Result.Cells[2,0]  := 'Mass (oz)';
   hb_addweight.Form4.Label1.Caption := 'Mass of Substance Used (oz)';
   cleanresults;
 
@@ -5288,10 +5393,16 @@ ListBox2.Items.Delete(selected_item);
 
 end;
 
-procedure TForm1.StringGrid2EditingDone(Sender: TObject);
-begin
-  weightFineTunning;
-end;
+
+
+
+
+
+
+//procedure TForm1.StringGrid_ResultEditingDone(Sender: TObject);
+//begin
+//  weightFineTunning;
+//end;
 
 procedure TForm1.StringGrid3SelectCell(Sender: TObject; aCol, aRow: Integer;
   var CanSelect: Boolean);
@@ -5320,4 +5431,4 @@ initialization
   {$I hb_main.lrs}
 
 end.
-
+

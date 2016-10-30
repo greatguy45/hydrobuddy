@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 251
-  Height = 807
-  Top = 107
-  Width = 1023
+  Left = 622
+  Height = 806
+  Top = 92
+  Width = 1135
   HorzScrollBar.Page = 841
   HorzScrollBar.Range = 824
   VertScrollBar.Page = 691
@@ -10,8 +10,8 @@ object Form1: TForm1
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'HydroBuddy v1.60 - Hydroponic Nutrient Calculator'
-  ClientHeight = 807
-  ClientWidth = 1023
+  ClientHeight = 806
+  ClientWidth = 1135
   DragKind = dkDock
   Icon.Data = {
     DE2800000000010001003232000001002000C828000016000000280000003200
@@ -346,13 +346,13 @@ object Form1: TForm1
   OnWindowStateChange = FormWindowStateChange
   ParentBiDiMode = False
   Position = poDesktopCenter
-  LCLVersion = '1.2.4.0'
+  LCLVersion = '1.6.0.4'
   Visible = True
   object PageControl1: TPageControl
     Left = 8
-    Height = 800
+    Height = 792
     Top = 0
-    Width = 1008
+    Width = 1016
     ActivePage = TabSheet1
     ParentFont = False
     TabIndex = 1
@@ -360,8 +360,8 @@ object Form1: TForm1
     OnChange = PageControl1Change
     object TabSheet4: TTabSheet
       Caption = 'Welcome'
-      ClientHeight = 775
-      ClientWidth = 1004
+      ClientHeight = 753
+      ClientWidth = 1010
       object PageControl2: TPageControl
         Left = 0
         Height = 648
@@ -8169,8 +8169,8 @@ object Form1: TForm1
         end
         object TabSheet9: TTabSheet
           Caption = 'Configuration Parameters'
-          ClientHeight = 644
-          ClientWidth = 824
+          ClientHeight = 609
+          ClientWidth = 822
           object Image5: TImage
             Left = 4
             Height = 618
@@ -22381,16 +22381,16 @@ object Form1: TForm1
     end
     object TabSheet1: TTabSheet
       Caption = 'Main Page'
-      ClientHeight = 775
-      ClientWidth = 1004
+      ClientHeight = 753
+      ClientWidth = 1010
       OnContextPopup = TabSheet1ContextPopup
       ParentShowHint = False
       ShowHint = True
       object Label1: TLabel
-        Left = 44
-        Height = 19
-        Top = 96
-        Width = 78
+        Left = 12
+        Height = 21
+        Top = 81
+        Width = 71
         Caption = 'N (NO3-)'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22399,9 +22399,9 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label2: TLabel
-        Left = 86
-        Height = 19
-        Top = 196
+        Left = 54
+        Height = 21
+        Top = 181
         Width = 11
         Caption = 'K'
         Font.Height = -16
@@ -22411,10 +22411,10 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label3: TLabel
-        Left = 87
-        Height = 19
-        Top = 160
-        Width = 12
+        Left = 55
+        Height = 21
+        Top = 145
+        Width = 9
         Caption = 'P'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22423,10 +22423,10 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 75
-        Height = 19
-        Top = 231
-        Width = 27
+        Left = 43
+        Height = 21
+        Top = 216
+        Width = 22
         Caption = 'Mg'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22435,10 +22435,10 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label5: TLabel
-        Left = 78
-        Height = 19
-        Top = 260
-        Width = 22
+        Left = 46
+        Height = 21
+        Top = 245
+        Width = 19
         Caption = 'Ca'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22447,10 +22447,10 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label6: TLabel
-        Left = 87
-        Height = 19
-        Top = 295
-        Width = 11
+        Left = 55
+        Height = 21
+        Top = 280
+        Width = 10
         Caption = 'S'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22459,10 +22459,10 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label7: TLabel
-        Left = 81
-        Height = 19
-        Top = 327
-        Width = 20
+        Left = 49
+        Height = 21
+        Top = 312
+        Width = 18
         Caption = 'Fe'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22471,10 +22471,10 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label8: TLabel
-        Left = 80
-        Height = 19
-        Top = 355
-        Width = 23
+        Left = 48
+        Height = 21
+        Top = 340
+        Width = 19
         Caption = 'Zn'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22483,10 +22483,10 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label9: TLabel
-        Left = 86
-        Height = 19
-        Top = 391
-        Width = 12
+        Left = 54
+        Height = 21
+        Top = 376
+        Width = 10
         Caption = 'B'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22495,10 +22495,10 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label10: TLabel
-        Left = 79
-        Height = 19
-        Top = 458
-        Width = 23
+        Left = 47
+        Height = 21
+        Top = 443
+        Width = 20
         Caption = 'Cu'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22507,10 +22507,10 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label11: TLabel
-        Left = 75
-        Height = 19
-        Top = 490
-        Width = 27
+        Left = 43
+        Height = 21
+        Top = 475
+        Width = 22
         Caption = 'Mo'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22519,10 +22519,10 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label12: TLabel
-        Left = 78
-        Height = 19
-        Top = 523
-        Width = 23
+        Left = 46
+        Height = 21
+        Top = 508
+        Width = 20
         Caption = 'Na'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22532,19 +22532,19 @@ object Form1: TForm1
       end
       object Label13: TLabel
         Left = 84
-        Height = 15
+        Height = 16
         Top = 558
-        Width = 12
+        Width = 11
         Caption = 'Si'
         ParentColor = False
         ParentFont = False
         Visible = False
       end
       object Label14: TLabel
-        Left = 82
-        Height = 19
-        Top = 586
-        Width = 16
+        Left = 50
+        Height = 21
+        Top = 571
+        Width = 14
         Caption = 'Cl'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22553,181 +22553,181 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label45: TLabel
-        Left = 54
-        Height = 15
+        Left = 16
+        Height = 16
         Top = 40
-        Width = 53
+        Width = 50
         Caption = 'Element'
         ParentColor = False
         ParentFont = False
       end
       object Label55: TLabel
-        Left = 140
-        Height = 15
+        Left = 102
+        Height = 16
         Top = 40
-        Width = 43
+        Width = 45
         Caption = 'Target '
         ParentColor = False
         ParentFont = False
       end
       object RLabel1: TLabel
-        Left = 208
-        Height = 15
-        Top = 100
+        Left = 170
+        Height = 16
+        Top = 81
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel3: TLabel
-        Left = 208
-        Height = 15
-        Top = 163
+        Left = 170
+        Height = 16
+        Top = 144
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel2: TLabel
-        Left = 208
-        Height = 15
-        Top = 196
+        Left = 170
+        Height = 16
+        Top = 179
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel4: TLabel
-        Left = 208
-        Height = 15
-        Top = 231
+        Left = 170
+        Height = 16
+        Top = 212
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel5: TLabel
-        Left = 208
-        Height = 15
-        Top = 259
+        Left = 170
+        Height = 16
+        Top = 245
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel6: TLabel
-        Left = 208
-        Height = 15
-        Top = 295
+        Left = 170
+        Height = 16
+        Top = 276
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel7: TLabel
-        Left = 208
-        Height = 15
-        Top = 327
+        Left = 170
+        Height = 16
+        Top = 308
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel8: TLabel
-        Left = 208
-        Height = 15
-        Top = 355
+        Left = 170
+        Height = 16
+        Top = 340
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel9: TLabel
-        Left = 208
-        Height = 15
-        Top = 391
+        Left = 170
+        Height = 16
+        Top = 372
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel10: TLabel
-        Left = 208
-        Height = 15
-        Top = 462
+        Left = 170
+        Height = 16
+        Top = 443
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel11: TLabel
-        Left = 208
-        Height = 15
-        Top = 490
+        Left = 170
+        Height = 16
+        Top = 471
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel12: TLabel
-        Left = 208
-        Height = 15
-        Top = 523
+        Left = 170
+        Height = 16
+        Top = 504
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel13: TLabel
-        Left = 208
-        Height = 15
-        Top = 555
+        Left = 170
+        Height = 16
+        Top = 536
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object RLabel14: TLabel
-        Left = 208
-        Height = 15
-        Top = 586
+        Left = 170
+        Height = 16
+        Top = 567
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object Label33: TLabel
-        Left = 208
-        Height = 15
+        Left = 170
+        Height = 16
         Top = 40
-        Width = 38
+        Width = 39
         Caption = 'Result'
         ParentColor = False
         ParentFont = False
       end
       object Label35: TLabel
-        Left = 120
-        Height = 15
+        Left = 82
+        Height = 16
         Top = 56
-        Width = 79
+        Width = 77
         Caption = 'Conc. (ppm)'
         ParentColor = False
         ParentFont = False
       end
       object Label38: TLabel
-        Left = 208
-        Height = 15
+        Left = 170
+        Height = 16
         Top = 56
-        Width = 39
+        Width = 37
         Caption = '(ppm)'
         ParentColor = False
         ParentFont = False
       end
       object Label15: TLabel
-        Left = 75
-        Height = 19
-        Top = 424
-        Width = 27
+        Left = 43
+        Height = 21
+        Top = 409
+        Width = 22
         Caption = 'Mn'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22736,19 +22736,19 @@ object Form1: TForm1
         ParentFont = False
       end
       object RLabel15: TLabel
-        Left = 208
-        Height = 15
-        Top = 424
+        Left = 170
+        Height = 16
+        Top = 405
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object Label16: TLabel
-        Left = 40
-        Height = 19
-        Top = 127
-        Width = 82
+        Left = 8
+        Height = 21
+        Top = 112
+        Width = 75
         Caption = 'N (NH4+)'
         Font.Height = -16
         Font.Name = 'Sans'
@@ -22757,162 +22757,162 @@ object Form1: TForm1
         ParentFont = False
       end
       object RLabel16: TLabel
-        Left = 208
-        Height = 15
-        Top = 128
+        Left = 170
+        Height = 16
+        Top = 109
         Width = 8
         Caption = '0'
         ParentColor = False
         ParentFont = False
       end
       object Edit1: TEdit
-        Left = 132
-        Height = 25
-        Top = 96
+        Left = 100
+        Height = 22
+        Top = 81
         Width = 60
         ParentFont = False
         TabOrder = 0
         Text = '260'
       end
       object Edit3: TEdit
-        Left = 132
-        Height = 25
-        Top = 159
+        Left = 100
+        Height = 22
+        Top = 144
         Width = 60
         ParentFont = False
         TabOrder = 1
         Text = '31'
       end
       object Edit2: TEdit
-        Left = 132
-        Height = 25
-        Top = 194
+        Left = 100
+        Height = 22
+        Top = 179
         Width = 60
         ParentFont = False
         TabOrder = 2
         Text = '235'
       end
       object Edit4: TEdit
-        Left = 132
-        Height = 25
-        Top = 226
+        Left = 100
+        Height = 22
+        Top = 211
         Width = 60
         ParentFont = False
         TabOrder = 3
         Text = '48'
       end
       object Edit5: TEdit
-        Left = 132
-        Height = 25
-        Top = 259
+        Left = 100
+        Height = 22
+        Top = 244
         Width = 60
         ParentFont = False
         TabOrder = 4
         Text = '200'
       end
       object Edit6: TEdit
-        Left = 132
-        Height = 25
-        Top = 290
+        Left = 100
+        Height = 22
+        Top = 275
         Width = 60
         ParentFont = False
         TabOrder = 5
         Text = '64'
       end
       object Edit7: TEdit
-        Left = 132
-        Height = 25
-        Top = 322
+        Left = 100
+        Height = 22
+        Top = 307
         Width = 60
         ParentFont = False
         TabOrder = 6
         Text = '2.5'
       end
       object Edit8: TEdit
-        Left = 132
-        Height = 25
-        Top = 355
+        Left = 100
+        Height = 22
+        Top = 340
         Width = 60
         ParentFont = False
         TabOrder = 7
         Text = '0.05'
       end
       object Edit9: TEdit
-        Left = 132
-        Height = 25
-        Top = 386
+        Left = 100
+        Height = 22
+        Top = 371
         Width = 60
         ParentFont = False
         TabOrder = 8
         Text = '0.5'
       end
       object Edit10: TEdit
-        Left = 132
-        Height = 25
-        Top = 456
+        Left = 100
+        Height = 22
+        Top = 441
         Width = 60
         ParentFont = False
         TabOrder = 9
         Text = '0.02'
       end
       object Edit11: TEdit
-        Left = 132
-        Height = 25
-        Top = 486
+        Left = 100
+        Height = 22
+        Top = 471
         Width = 60
         ParentFont = False
         TabOrder = 10
         Text = '0.01'
       end
       object Edit12: TEdit
-        Left = 132
-        Height = 25
-        Top = 516
+        Left = 100
+        Height = 22
+        Top = 504
         Width = 60
         ParentFont = False
         TabOrder = 11
         Text = '0'
       end
       object Edit13: TEdit
-        Left = 132
-        Height = 25
-        Top = 551
+        Left = 100
+        Height = 22
+        Top = 536
         Width = 60
         ParentFont = False
         TabOrder = 12
         Text = '0'
       end
       object Edit14: TEdit
-        Left = 132
-        Height = 25
-        Top = 582
+        Left = 100
+        Height = 22
+        Top = 567
         Width = 60
         ParentFont = False
         TabOrder = 13
         Text = '0'
       end
       object Panel1: TPanel
-        Left = 328
-        Height = 102
-        Top = 516
-        Width = 394
-        ClientHeight = 102
-        ClientWidth = 394
+        Left = 320
+        Height = 70
+        Top = 687
+        Width = 410
+        ClientHeight = 70
+        ClientWidth = 410
         ParentFont = False
         TabOrder = 14
         object Label37: TLabel
           Left = 8
-          Height = 15
+          Height = 16
           Top = 8
-          Width = 102
+          Width = 105
           Caption = 'Calculation Type'
           ParentColor = False
         end
         object RadioButton4: TRadioButton
           Left = 8
-          Height = 21
+          Height = 18
           Top = 24
-          Width = 209
+          Width = 198
           Caption = 'Input Desired Concentrations'
           Checked = True
           OnChange = RadioButton4Change
@@ -22921,19 +22921,19 @@ object Form1: TForm1
         end
         object RadioButton5: TRadioButton
           Left = 8
-          Height = 21
+          Height = 18
           Top = 48
-          Width = 211
+          Width = 201
           Caption = 'Concentrations from  Weights'
           OnChange = RadioButton5Change
           TabOrder = 0
         end
         object Button10: TButton
-          Left = 8
+          Left = 224
           Height = 25
           Hint = 'Copy weights resulting from a formulation calculation to the database (to use within a weights to formulation calculation)'
-          Top = 72
-          Width = 198
+          Top = 40
+          Width = 174
           Caption = 'Copy Weight Results to DB'
           Enabled = False
           OnClick = Button10Click
@@ -22941,38 +22941,38 @@ object Form1: TForm1
         end
       end
       object Panel2: TPanel
-        Left = 328
-        Height = 106
-        Top = 400
-        Width = 394
-        ClientHeight = 106
-        ClientWidth = 394
+        Left = 320
+        Height = 90
+        Top = 592
+        Width = 408
+        ClientHeight = 90
+        ClientWidth = 408
         ParentFont = False
         TabOrder = 15
         object Label34: TLabel
           Left = 8
-          Height = 15
+          Height = 16
           Top = 8
-          Width = 162
+          Width = 159
           Caption = 'Solution Preparation type'
           ParentColor = False
         end
         object RadBtn_ABSolution: TRadioButton
           Left = 8
-          Height = 21
+          Height = 18
           Hint = 'Choose this to carry out A+B stock solution calculations '
           Top = 36
-          Width = 214
+          Width = 199
           Caption = 'Concentrated A + B Solutions'
           OnChange = RadBtn_ABSolutionChange
           TabOrder = 2
         end
         object RadBtn_DirectAddition: TRadioButton
           Left = 240
-          Height = 21
+          Height = 18
           Hint = 'Choose this if you want to add salts directly to your reservoir'
           Top = 36
-          Width = 117
+          Width = 111
           Caption = 'Direct Addition'
           Checked = True
           OnChange = RadBtn_DirectAdditionChange
@@ -22981,7 +22981,7 @@ object Form1: TForm1
         end
         object TxtBox_ConcFactor: TEdit
           Left = 144
-          Height = 25
+          Height = 22
           Hint = 'This value determines how concentrated stock solutions are when compared to the final reservoir concentrations'
           Top = 64
           Width = 62
@@ -23001,18 +23001,18 @@ object Form1: TForm1
         end
         object CheckBox6: TCheckBox
           Left = 224
-          Height = 21
+          Height = 18
           Top = 64
-          Width = 165
+          Width = 156
           Caption = 'Calculate liquids in mL'
           TabOrder = 4
         end
         object Label36: TLabel
           Left = 8
-          Height = 15
+          Height = 16
           Hint = 'Measures the concentration ratio between the stock and final solutions'
           Top = 68
-          Width = 133
+          Width = 132
           Caption = 'Concentration Factor'
           ParentColor = False
         end
@@ -23028,7 +23028,7 @@ object Form1: TForm1
         TabOrder = 16
         object Label17: TLabel
           Left = 4
-          Height = 15
+          Height = 16
           Top = 8
           Width = 48
           Caption = 'Volume'
@@ -23036,7 +23036,7 @@ object Form1: TForm1
         end
         object Edit19: TEdit
           Left = 4
-          Height = 25
+          Height = 22
           Hint = 'Volume used within the calculation (this can be reservoir or stock solution volume depending on the calculation type)'
           Top = 28
           Width = 114
@@ -23045,10 +23045,10 @@ object Form1: TForm1
         end
         object RadioButton1: TRadioButton
           Left = 80
-          Height = 21
+          Height = 18
           Hint = 'Changes input volume to liters'
           Top = 56
-          Width = 58
+          Width = 54
           Caption = 'Liters'
           Checked = True
           OnChange = RadioButton1Change
@@ -23057,20 +23057,20 @@ object Form1: TForm1
         end
         object RadioButton2: TRadioButton
           Left = 4
-          Height = 21
+          Height = 18
           Hint = 'Changes input volume to gallons'
           Top = 56
-          Width = 70
+          Width = 65
           Caption = 'Gallons'
           OnChange = RadioButton2Change
           TabOrder = 2
         end
         object RadioButton3: TRadioButton
           Left = 4
-          Height = 21
+          Height = 18
           Hint = 'Changes volume input to cubic meters ( one cubic meter is 1000 Liters)'
           Top = 80
-          Width = 106
+          Width = 101
           Caption = 'Cubic Meters'
           OnChange = RadioButton3Change
           TabOrder = 3
@@ -23089,9 +23089,9 @@ object Form1: TForm1
         Visible = False
       end
       object Edit15: TEdit
-        Left = 132
-        Height = 25
-        Top = 422
+        Left = 100
+        Height = 22
+        Top = 407
         Width = 60
         ParentFont = False
         TabOrder = 18
@@ -23111,9 +23111,9 @@ object Form1: TForm1
       end
       object CheckBox1: TCheckBox
         Left = 903
-        Height = 21
+        Height = 18
         Top = 50
-        Width = 89
+        Width = 83
         Caption = 'Enable DB'
         OnChange = CheckBox1Change
         ParentFont = False
@@ -23121,9 +23121,9 @@ object Form1: TForm1
         Visible = False
       end
       object Edit16: TEdit
-        Left = 132
-        Height = 25
-        Top = 127
+        Left = 100
+        Height = 22
+        Top = 112
         Width = 60
         ParentFont = False
         TabOrder = 21
@@ -23131,10 +23131,10 @@ object Form1: TForm1
       end
       object ChkBox_DisablePopUp: TCheckBox
         Left = 736
-        Height = 21
+        Height = 18
         Hint = 'Checking this box will cause all calculation-related informative pop-ups to be switched off'
-        Top = 672
-        Width = 126
+        Top = 712
+        Width = 120
         Caption = 'Disable Pop-ups'
         Checked = True
         OnChange = ChkBox_DisablePopUpChange
@@ -23144,10 +23144,10 @@ object Form1: TForm1
       end
       object CheckBox4: TCheckBox
         Left = 736
-        Height = 21
+        Height = 18
         Hint = 'When checked an auto update procedure is excecuted on startup'
-        Top = 696
-        Width = 135
+        Top = 736
+        Width = 126
         Caption = 'Update on statup'
         Checked = True
         OnChange = CheckBox4Change
@@ -23156,11 +23156,11 @@ object Form1: TForm1
         TabOrder = 23
       end
       object CheckBox5: TCheckBox
-        Left = 736
-        Height = 21
+        Left = 887
+        Height = 18
         Hint = 'When checked the program will be started on a small window (great for netbooks)'
-        Top = 720
-        Width = 110
+        Top = 736
+        Width = 105
         Caption = 'Small Window'
         OnChange = CheckBox5Change
         TabOrder = 24
@@ -23175,17 +23175,17 @@ object Form1: TForm1
         TabOrder = 25
         object Label51: TLabel
           Left = 0
-          Height = 15
+          Height = 16
           Top = 8
-          Width = 127
+          Width = 125
           Caption = 'Concentration Units'
           ParentColor = False
         end
         object RadioButton10: TRadioButton
           Left = 0
-          Height = 21
+          Height = 18
           Top = 24
-          Width = 52
+          Width = 47
           Caption = 'ppm'
           Checked = True
           OnChange = RadioButton10Change
@@ -23194,27 +23194,27 @@ object Form1: TForm1
         end
         object RadioButton11: TRadioButton
           Left = 0
-          Height = 21
+          Height = 18
           Top = 48
-          Width = 34
+          Width = 32
           Caption = 'M'
           OnChange = RadioButton11Change
           TabOrder = 0
         end
         object RadioButton12: TRadioButton
           Left = 55
-          Height = 21
+          Height = 18
           Top = 24
-          Width = 47
+          Width = 43
           Caption = 'mM'
           OnChange = RadioButton12Change
           TabOrder = 1
         end
         object RadioButton13: TRadioButton
           Left = 56
-          Height = 21
+          Height = 18
           Top = 48
-          Width = 46
+          Width = 41
           Caption = 'mN'
           OnChange = RadioButton13Change
           TabOrder = 2
@@ -23241,9 +23241,9 @@ object Form1: TForm1
         Visible = False
       end
       object ComboBox3: TComboBox
-        Left = 44
-        Height = 23
-        Top = 551
+        Left = 12
+        Height = 20
+        Top = 536
         Width = 53
         Font.Height = -16
         Font.Name = 'Sans'
@@ -23259,274 +23259,21 @@ object Form1: TForm1
         TabOrder = 28
         Text = 'Si'
       end
-      object Button26: TBitBtn
-        Left = 912
-        Height = 40
-        Top = 7
-        Width = 76
-        Glyph.Data = {
-          3E1E0000424D3E1E00000000000036000000280000003E0000001F0000000100
-          200000000000081E000064000000640000000000000000000000FFFFFFFFFFFF
-          FFFFF5FBFFFFFFFFFFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFFFFFFFFFFF5FBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0099FFFF5FBF
-          FFFF91D4FFFFA5DBFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DC
-          FFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DC
-          FFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DC
-          FFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DC
-          FFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DC
-          FFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DC
-          FFFFA8DCFFFFA8DCFFFFA8DCFFFFA8DCFFFFA5DBFFFF91D4FFFF5FBFFFFF0099
-          FFFFFFFFFFFFFFFFFFFFEFF9FFFF0099FFFF95D5FEFFBEE6FFFFC9EAFFFFCDEB
-          FFFFCEEDFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEB
-          FFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEB
-          FFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEB
-          FFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEB
-          FFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEB
-          FFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEBFFFFCDEB
-          FFFFCDEBFFFFCEEDFFFFCDEBFFFFC9EAFFFFBEE6FFFF95D5FEFF0099FFFFEFF9
-          FFFFFFFFFFFF57BCFFFFB5E2FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4
-          FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4
-          FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4
-          FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4
-          FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4
-          FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4
-          FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4FFFFBCE4
-          FFFFBCE4FFFFBCE4FFFFBCE4FFFFB5E2FFFF57BCFFFFFFFFFFFF0099FFFF87CF
-          FFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DB
-          FFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DB
-          FFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DB
-          FFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DB
-          FFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DB
-          FFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DB
-          FFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DBFFFFA5DB
-          FFFFA5DBFFFFA5DBFFFF87CFFFFF0099FFFF0099FFFF87CFFFFF8ED2FFFF8ED2
-          FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2
-          FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF663312FF663312FF6633
-          12FF663312FF8ED2FFFF8ED2FFFF8ED2FFFF663312FF663312FF8ED2FFFF8ED2
-          FFFF663312FF8ED2FFFF8ED2FFFF663312FF8ED2FFFF663312FF663312FF6633
-          12FF663312FF8ED2FFFF663312FF663312FF8ED2FFFF8ED2FFFF663312FF6633
-          12FF663312FF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2
-          FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2FFFF8ED2
-          FFFF87CFFFFF0099FFFF0099FFFF76CAFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCB
-          FFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCB
-          FFFF7BCBFFFF7BCBFFFF7BCBFFFF663312FF7BCBFFFF7BCBFFFF7BCBFFFF6633
-          12FF7BCBFFFF663312FF7BCBFFFF7BCBFFFF663312FF7BCBFFFF663312FF7BCB
-          FFFF7BCBFFFF663312FF7BCBFFFF663312FF7BCBFFFF7BCBFFFF663312FF7BCB
-          FFFF663312FF7BCBFFFF7BCBFFFF663312FF7BCBFFFF7BCBFFFF7BCBFFFF7BCB
-          FFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCB
-          FFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF7BCBFFFF76CAFFFF0099
-          FFFF0099FFFF66C3FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4
-          FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4
-          FFFF6AC4FFFF663312FF6AC4FFFF6AC4FFFF6AC4FFFF663312FF6AC4FFFF6633
-          12FF6AC4FFFF6AC4FFFF663312FF6AC4FFFF663312FF6AC4FFFF6AC4FFFF6633
-          12FF6AC4FFFF6AC4FFFF663312FF663312FF663312FF6AC4FFFF663312FF6AC4
-          FFFF6AC4FFFF663312FF663312FF663312FF663312FF6AC4FFFF6AC4FFFF6AC4
-          FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4
-          FFFF6AC4FFFF6AC4FFFF6AC4FFFF6AC4FFFF66C3FFFF0099FFFF0099FFFF57BC
-          FFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BD
-          FFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF6633
-          12FF59BDFFFF59BDFFFF59BDFFFF663312FF59BDFFFF663312FF59BDFFFF59BD
-          FFFF663312FF59BDFFFF663312FF59BDFFFF59BDFFFF663312FF59BDFFFF59BD
-          FFFF59BDFFFF59BDFFFF663312FF59BDFFFF663312FF59BDFFFF59BDFFFF6633
-          12FF59BDFFFF59BDFFFF663312FF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BD
-          FFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BDFFFF59BD
-          FFFF59BDFFFF59BDFFFF57BCFFFF0099FFFF0099FFFF44B6FFFF49B7FFFF49B7
-          FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7
-          FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF663312FF49B7FFFF49B7
-          FFFF49B7FFFF663312FF49B7FFFF49B7FFFF663312FF663312FF49B7FFFF49B7
-          FFFF663312FF663312FF663312FF663312FF49B7FFFF663312FF663312FF6633
-          12FF663312FF663312FF663312FF663312FF49B7FFFF49B7FFFF663312FF6633
-          12FF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7
-          FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7FFFF49B7
-          FFFF44B6FFFF0099FFFF0099FFFF39B2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2
-          FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2
-          FFFF3CB2FFFF3CB2FFFF3CB2FFFF663312FF663312FF663312FF663312FF3CB2
-          FFFF3CB2FFFF3CB2FFFF3EB3FFFF3EB3FFFF3EB3FFFF3EB3FFFF3EB3FFFF3EB3
-          FFFF3EB3FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2
-          FFFF663312FF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2
-          FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2
-          FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF3CB2FFFF39B2FFFF0099
-          FFFF0099FFFF2DADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30AD
-          FFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30AD
-          FFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30AD
-          FFFF35B1FFFF35B1FFFF3CB2FFFF3AB4FFFF39B2FFFF39B2FFFF35B1FFFF30AD
-          FFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30AD
-          FFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30AD
-          FFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF30AD
-          FFFF30ADFFFF30ADFFFF30ADFFFF30ADFFFF2DADFFFF0099FFFF0099FFFF26A9
-          FFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AA
-          FFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AA
-          FFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF28ABFFFF2BACFFFF2FAEFFFF35B1
-          FFFF3AB4FFFF3DB5FFFF3DB5FFFF3AB4FFFF32B0FFFF2FAEFFFF28ABFFFF27AA
-          FFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AA
-          FFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AA
-          FFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AAFFFF27AA
-          FFFF27AAFFFF27AAFFFF26A9FFFF0099FFFF0099FFFF22A7FFFF23A8FFFF23A8
-          FFFF23A8FFFF23A8FFFF23A8FFFF23A8FFFF26A9FFFF26A9FFFF27AAFFFF27AA
-          FFFF26AAFFFF26A9FFFF26A9FFFF23A8FFFF26A9FFFF26A9FFFF27AAFFFF28AB
-          FFFF2BACFFFF2BACFFFF2BACFFFF2FAEFFFF35B1FFFF3DB5FFFF44BAFFFF44BA
-          FFFF44BAFFFF3DB5FFFF3DB5FFFF32B0FFFF2BACFFFF27AAFFFF26AAFFFF26A9
-          FFFF26A9FFFF23A8FFFF23A8FFFF26A9FFFF26A9FFFF27AAFFFF28ABFFFF2BAC
-          FFFF2BACFFFF2BACFFFF28ABFFFF28ABFFFF27AAFFFF27AAFFFF26AAFFFF26A9
-          FFFF23A8FFFF23A8FFFF23A8FFFF23A8FFFF23A8FFFF23A8FFFF23A8FFFF23A8
-          FFFF22A7FFFF0099FFFF0099FFFF22A7FFFF23A8FFFF23A8FFFF23A8FFFF23A8
-          FFFF23A8FFFF26A9FFFF28ABFFFF2BACFFFF2FAEFFFF2FAEFFFF2DADFFFF2BAC
-          FFFF28ABFFFF27AAFFFF28ABFFFF2DADFFFF32B0FFFF35B1FFFF39B2FFFF3AB4
-          FFFF3AB4FFFF3DB5FFFF44BAFFFF44B6FFFF776B62FF673C23FF7D7C78FF60C7
-          FDFF4CBDFFFF3DB5FFFF35B1FFFF2FAEFFFF2FAEFFFF2DADFFFF2BACFFFF28AB
-          FFFF27AAFFFF28ABFFFF2DADFFFF32B0FFFF35B1FFFF39B2FFFF39B2FFFF39B2
-          FFFF39B2FFFF35B1FFFF32B0FFFF32B0FFFF2FAEFFFF2BACFFFF28ABFFFF26A9
-          FFFF23A8FFFF23A8FFFF23A8FFFF23A8FFFF23A8FFFF23A8FFFF22A7FFFF0099
-          FFFF0099FFFF22A7FFFF23A8FFFF23A8FFFF23A8FFFF23A8FFFF26A9FFFF28AB
-          FFFF2FAEFFFF35B1FFFF3AB4FFFF3DB5FFFF3AB4FFFF35B1FFFF2FAEFFFF2DAD
-          FFFF2FAEFFFF35B1FFFF3DB5FFFF44BAFFFF4ABDFFFF4CBDFFFF4CBDFFFF4CBD
-          FFFF55C2FEFF60C7FDFF6AA1BAFF64361BFF673C23FF5FB3E0FF60C7FDFF55C2
-          FEFF44BAFFFF3DB5FFFF3DB5FFFF39B2FFFF32B0FFFF2FAEFFFF2DADFFFF2FAE
-          FFFF35B1FFFF3DB5FFFF44BAFFFF4CBDFFFF4CBDFFFF4CBDFFFF4ABDFFFF44BA
-          FFFF44BAFFFF44BAFFFF3AB4FFFF35B1FFFF2FAEFFFF28ABFFFF26A9FFFF23A8
-          FFFF23A8FFFF23A8FFFF23A8FFFF23A8FFFF22A7FFFF0099FFFF0099FFFF22A8
-          FFFF26AAFFFF49B7FFFF5FBFFFFF66C3FFFF6AC6FFFF6FC8FFFF76CAFFFF78CD
-          FFFF83CDF7FF83CDF7FF82D2FEFF7DCFFFFF78CDFFFF78CDFFFF78CDFFFF7DCF
-          FFFF82D2FEFF8DCCECFF8CC2DDFF95D9FBFF95DCFFFF93D5F5FF98DEFFFFA1E2
-          FFFFA2D7EDFF776B62FF64361BFF776B62FF9EE1FFFF95DCFFFF8DD7FEFF88D2
-          FAFF88D2FAFF7DCFFFFF7DCFFFFF78CDFFFF78CDFFFF78CDFFFF7DCFFFFF86D4
-          FFFF8DCCECFF94CCE5FF95DCFFFF95DCFFFF95D9FBFF94D9FFFF8DD7FEFF88D2
-          FAFF82D2FEFF7DCFFFFF76CAFFFF6FC8FFFF6AC6FFFF6AC4FFFF66C3FFFF59BD
-          FFFF44B6FFFF23A8FFFF22A8FFFF0099FFFF0099FFFF39B2FFFF72C8FEFF7ECD
-          FEFF84CFFEFF84CFFEFF86D1FEFF8ED2FFFF94D9FFFF9CDBFEFF7B6353FF6E48
-          32FF8A9699FFA2DCF9FF9DDCFEFF9CDBFEFF9DDCFEFFA1DDFEFF92A8B1FF734D
-          37FF6C4229FF755847FF827469FF755847FF8F918DFFBBEAFFFFB8E1F0FF9481
-          73FF64361BFF673C23FFADBDC1FFBBEAFFFFB2E5FEFFA29A87FF9F7D56FFA9B9
-          B7FFA3DBF8FF9DDCFEFF9CDBFEFF9DDCFEFFA1DDFEFFA4AFA8FFA47D52FFA070
-          3EFFA48A67FFA48E6EFF9F7D56FFB5BAB5FFAECACFFF9F7D56FFA29A87FF9ED8
-          F6FF94D9FFFF91D4FFFF86D1FEFF84CFFEFF84CFFEFF84CFFEFF7ECDFEFF66C3
-          FFFF2DADFFFF0099FFFF0099FFFF7BCBFFFF95D5FEFF95D5FEFF95D5FEFF95D5
-          FEFF95D5FEFF9BD8FEFFA1DDFEFFB0E2FFFF75533EFF64361BFF886C5AFFB0D5
-          E6FFB7E7FEFFB2E5FEFFB7E7FEFFB0D5E6FF87786DFF64361BFF80604CFFA7A3
-          9DFF886C5AFF64361BFF7B5A45FFCBF0FEFFCAE5ECFF816552FF64361BFF6436
-          1BFF816552FFCBF0FEFFC6EEFFFFA99578FF9B6732FFA99578FFB8E1F0FFB7E7
-          FEFFB2E5FEFFB2E5FEFFB8E1F0FFA48A67FF9B6732FFAC916FFFB7B4A3FFA685
-          5EFF9B6732FFB1A48CFFBDC8C6FF9F7140FFA47D52FFAECCD5FFA9E0FEFFA1DD
-          FEFF9BD8FEFF95D5FEFF95D5FEFF95D5FEFF95D5FEFF91D4FFFF72C8FEFF0099
-          FFFF0099FFFF9BD8FEFFA2DBFEFFA2DBFEFFA2DBFEFFA2DBFEFFA4DCFEFFA9E0
-          FEFFB0E2FFFFBBEAFFFF87786DFF6C4229FF6E462EFFADBDC1FFCBF0FEFFC8EE
-          FFFFC6EEFFFFC6EBFBFF87786DFF64361BFF867263FFD6F6FFFFC3D1D3FF6E46
-          2EFF6E4832FFC6DDE1FFD1E8EFFF734D37FF64361BFF64361BFF673C23FFABB0
-          ACFFD6F6FFFFBCB6A4FF9E6C3AFFA47647FFC6DDE1FFCBF0FEFFC6EEFFFFC6EE
-          FFFFC8EEFFFFA6855EFF9B6732FFB8AA93FFD6F6FFFFC5CBC2FF9F7140FFAC8D
-          68FFC5CBC2FFAC8D68FF9E6C3AFFB5BAB5FFB7E7FEFFB0E2FFFFA8DCFFFFA4DC
-          FEFFA2DBFEFFA2DBFEFFA2DBFEFFA2DBFEFF99D7FEFF0099FFFF0099FFFFA8DC
-          FFFFAFE0FFFFAFE0FFFFAFE0FFFFAFE0FFFFB0E2FFFFB5E2FFFFBBEAFFFFC2E9
-          FFFFA7A39DFF795641FF64361BFF765440FF816552FF867263FFA89B92FFCAE5
-          ECFFC3D1D3FF7F5E4AFF673C23FF846755FF89705FFF673C23FF6E462EFFB5BA
-          B5FFD1E8EFFF64361BFF6C4229FF948173FF64361BFF765440FFD8F1F8FFCED9
-          D4FFA0703EFF9C6935FFA6855EFFAC8962FFB29674FFBCB6A4FFD6F1F9FFC5CB
-          C2FFA68055FF9E6C3AFFAC916FFFAC8D68FF9C6935FFA68055FFC9C7BAFFBBA8
-          8EFF9B6732FFB8AA93FFC6EEFFFFBEE6FFFFB5E5FEFFB0E2FFFFAFE0FFFFAFE0
-          FFFFAFE0FFFFAFE0FFFFA8DCFFFF0099FFFF0099FFFFB5E2FFFFBBE5FFFFBBE5
-          FFFFBBE5FFFFBBE5FFFFBBE5FFFFBEE6FFFFC7E9FFFFCEEDFFFFBDC8C6FF8467
-          55FF64361BFF673C23FF6E462EFF64361BFF64361BFF89705FFFC3CAC8FFD0DD
-          E0FFB2ACA4FFA09084FF948173FF7B5A45FF673C23FFA09084FFCBD3D3FF6436
-          1BFF734D37FFD0DDE0FF795641FF64361BFFA7A39DFFE1F5FEFFA57A4CFF9B67
-          32FF9C6935FFA17242FF9B6732FF9E6C3AFFB29674FFD5E0DCFFD5E0DCFFC5BA
-          A9FFBBA88EFFB89F80FFA57A4CFF9E6C3AFFC3B9A7FFC3B9A7FF9B6732FFB296
-          74FFD0F0FFFFC9EAFFFFC2E9FFFFBEE6FFFFBBE5FFFFBBE5FFFFBBE5FFFFBBE5
-          FFFFB5E2FFFF0099FFFF0099FFFFBEE6FFFFC7E9FFFFC7E9FFFFC7E9FFFFC7E9
-          FFFFC7E9FFFFC9EAFFFFCEEDFFFFD4F0FFFFD1E8EFFF948173FF64361BFF886C
-          5AFFBFBEBAFFB9B4AEFF7F5E4AFF64361BFF967F70FFCBD3D3FFB2ACA4FFBEBB
-          B6FFB2ACA4FF80604CFF64361BFF886C5AFFB9B4AEFF64361BFF7F5E4AFFE6F9
-          FFFFB6B3ADFF64361BFF6E462EFFD6E6E9FFB2916BFF9B6732FFB29674FFCFCC
-          C0FFC9C1B0FFA57A4CFF9B6732FFC3B099FFD5D2C7FFC9C7BAFFCFCCC0FFCABD
-          ABFFA88055FF9B6732FFB8AA93FFCFCCC0FF9B6732FFAB865EFFD6EAF2FFD4F0
-          FFFFCEEDFFFFC9EAFFFFC7E9FFFFC7E9FFFFC7E9FFFFC7E9FFFFBEE6FFFF0099
-          FFFF0099FFFFC9EAFFFFD2EEFFFFD2EEFFFFD2EEFFFFD2EEFFFFD2EEFFFFD2EE
-          FFFFD4F0FFFFDDF2FFFFE1F5FEFFA89B92FF64361BFF886C5AFFE4F1F3FFEEFA
-          FFFFB2ACA4FF64361BFF7B5A45FFA59488FF80604CFF75533EFF795641FF673C
-          23FF734D37FFA89B92FFA89B92FF64361BFF947A6AFFE6F9FFFFE1F2F8FF8467
-          55FF64361BFFA59488FFBCA68BFF9C6935FFB29674FFEEFAFFFFEEFAFFFFBCA6
-          8BFF9B6732FFAC8D68FFBCA68BFFAB865EFFA88055FFA47D52FF9C6935FFA57A
-          4CFFD1C9BCFFDDDCD5FF9F7140FFA57A4CFFD2D5D0FFDDF2FFFFD9F1FFFFD5EF
-          FFFFD2EEFFFFD2EEFFFFD2EEFFFFD2EEFFFFC9EAFFFF0099FFFF0099FFFFD5EF
-          FFFFDDF2FFFFDDF2FFFFDDF2FFFFDDF2FFFFDDF2FFFFDDF2FFFFDDF2FFFFE1F5
-          FEFFE9F6FFFFBEBBB6FF6E462EFF6C4229FFA89B92FFC5C1BDFF967F70FF6436
-          1BFF795641FFC2BBB6FFB6B3ADFF9C8576FF967F70FFA09084FFBDB7B2FFE3EB
-          EEFFC5C1BDFF9E8C80FFC6C6C4FFE7F7FFFFE9F6FFFFCDCFCFFFA09084FFA7A3
-          9DFFC5BAA9FFA0703EFFA0703EFFCFC2AFFFD4CEC6FFB2916BFF9B6732FFAB86
-          5EFFD4CEC6FFCABDABFFB89F80FFB99B7AFFBBA88EFFD1C9BCFFE9F5F8FFE0E4
-          E0FFAB865EFF9E6C3AFFCABDABFFE5F5FFFFE5F5FFFFDDF2FFFFDDF2FFFFDDF2
-          FFFFDDF2FFFFDDF2FFFFD2EEFFFF0099FFFF0099FFFFDDF2FFFFE8F6FFFFE8F6
-          FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE9F6FFFFEAF7FFFFECF9FFFFD9DA
-          DAFF816552FF64361BFF673C23FF673C23FF64361BFF6E462EFF9C8576FFEBF1
-          F3FFEEFAFFFFEEFAFFFFEDF9FFFFEDF9FFFFEDF9FFFFEDF9FFFFECF9FFFFECF9
-          FFFFECF9FFFFEAF8FFFFECF9FFFFECF9FFFFEDF9FFFFEEFAFFFFE3E1DBFFA476
-          47FF9B6732FF9E6C3AFF9E6C3AFF9B6732FFA17242FFC3B099FFEBF1F3FFF0FA
-          FFFFEEFAFFFFEDF9FFFFEDF9FFFFEEFAFFFFEEFAFFFFE8EEEFFFBDA284FF9B67
-          32FFBDA284FFE3EBEEFFEAF8FFFFE9F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6
-          FFFFDDF2FFFF0099FFFF0099FFFFD2EEFFFFEFF9FFFFEFF9FFFFEFF9FFFFEFF9
-          FFFFEFF9FFFFEFF9FFFFEFF9FFFFF0FAFFFFF1FAFFFFEBF1F3FF9C8576FF6E46
-          2EFF6E462EFF6C4229FF734D37FF947A6AFFD4CEC6FFF1FAFFFFF5FBFFFFF1FA
-          FFFFF1FAFFFFF1FAFFFFF1FAFFFFF1FAFFFFF1FAFFFFF1FAFFFFF1FAFFFFF1FA
-          FFFFF1FAFFFFF1FAFFFFF1FAFFFFF5FBFFFFF0F5F6FFB38F68FFA47647FFA070
-          3EFFA0703EFFA57A4CFFB99B7AFFE3E1DBFFF1FAFFFFF5FBFFFFF1FAFFFFF1FA
-          FFFFF1FAFFFFF1FAFFFFF1FAFFFFF2F9FCFFCABDABFFA47647FFBDA284FFDDDC
-          D5FFF1FAFFFFEFF9FFFFEFF9FFFFEFF9FFFFEFF9FFFFEFF9FFFFCEEDFFFF0099
-          FFFFFFFFFFFF95D5FEFFF5FBFFFFF5FBFFFFF5FBFFFFF5FBFFFFF5FBFFFFF5FB
-          FFFFF5FBFFFFF5FBFFFFF6FCFFFFF6FCFFFFF6FCFFFFF8FDFFFFF8FDFFFFF8FD
-          FFFFF8FDFFFFF8FDFFFFF6FCFFFFF6FCFFFFF6FCFFFFF6FCFFFFF5FBFFFFF5FB
-          FFFFF5FBFFFFF5FBFFFFF5FBFFFFF5FBFFFFF5FBFFFFF5FBFFFFF5FBFFFFF5FB
-          FFFFF6FCFFFFF6FCFFFFF6FCFFFFF6FCFFFFF8FDFFFFF8FDFFFFF8FDFFFFF8FD
-          FFFFF6FCFFFFF6FCFFFFF6FCFFFFF6FCFFFFF6FCFFFFF5FBFFFFF5FBFFFFF6FC
-          FFFFF6FCFFFFF6FCFFFFF6FCFFFFF6FCFFFFF6FCFFFFF6FCFFFFF5FBFFFFF5FB
-          FFFFF5FBFFFFF5FBFFFFF5FBFFFFF5FBFFFF92D3FFFFFFFFFFFFFFFFFFFF0099
-          FFFFCEEBFFFFEDF9FFFFF8FDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFD
-          FFFFFAFDFFFFFBFDFFFFFBFDFFFFFBFDFFFFFBFEFFFFFBFEFFFFFBFEFFFFFBFD
-          FFFFFBFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFD
-          FFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFD
-          FFFFFBFDFFFFFBFDFFFFFBFDFFFFFBFEFFFFFBFEFFFFFBFEFFFFFBFDFFFFFBFD
-          FFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFD
-          FFFFFBFDFFFFFBFDFFFFFBFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFFAFDFFFFF8FD
-          FFFFEDF9FFFFCEEBFFFF0099FFFFFBFEFFFFFFFFFFFFFFFFFFFF0099FFFF95D5
-          FEFFC9EAFFFFE5F5FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6
-          FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE9F6FFFFE9F6FFFFE8F6
-          FFFFE8F6FFFFE8F6FFFFE8F6FFFFE9F6FFFFE9F6FFFFE8F6FFFFE8F6FFFFE9F6
-          FFFFE9F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE9F6
-          FFFFE8F6FFFFE9F6FFFFE9F6FFFFE8F6FFFFE8F6FFFFE9F6FFFFE8F6FFFFE8F6
-          FFFFE9F6FFFFE9F6FFFFE8F6FFFFE9F6FFFFE9F6FFFFE8F6FFFFE8F6FFFFE9F6
-          FFFFE8F6FFFFE8F6FFFFE8F6FFFFE8F6FFFFE5F5FFFFC9EAFFFF95D5FEFF0099
-          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099FFFF0099
-          FFFF0099FFFF0099FFFF039AFFFF0099FFFFFFFFFFFFFEFFFFFFFFFFFFFFFFFF
-          FFFF
-        }
-        OnClick = Button26Click
-        TabOrder = 29
-      end
       object Label25: TLabel
         Left = 736
-        Height = 19
+        Height = 18
         Top = 72
         Width = 160
-        Caption = 'Substance Database'
+        Caption = 'Substance Database:'
         Font.Height = -16
         ParentColor = False
         ParentFont = False
       end
       object Label26: TLabel
-        Left = 328
-        Height = 19
+        Left = 320
+        Height = 18
         Top = 72
-        Width = 261
+        Width = 257
         Caption = 'Substances Used for Calculations'
         Font.Height = -16
         ParentColor = False
@@ -23534,29 +23281,25 @@ object Form1: TForm1
       end
       object ListBox1: TListBox
         Left = 736
-        Height = 410
-        Top = 96
-        Width = 256
+        Height = 158
+        Top = 90
+        Width = 272
         ItemHeight = 0
         OnSelectionChange = ListBox1SelectionChange
-        ScrollWidth = 254
-        TabOrder = 30
-        TopIndex = -1
+        TabOrder = 29
       end
       object ListBox2: TListBox
-        Left = 328
-        Height = 240
-        Top = 96
+        Left = 320
+        Height = 158
+        Top = 90
         Width = 256
         ItemHeight = 0
         OnSelectionChange = ListBox2SelectionChange
-        ScrollWidth = 254
-        TabOrder = 31
-        TopIndex = -1
+        TabOrder = 30
       end
       object BtnAddRawSaltForCalc: TBitBtn
         Left = 592
-        Height = 32
+        Height = 24
         Top = 96
         Width = 136
         Caption = 'Include Salt'
@@ -23679,12 +23422,12 @@ object Form1: TForm1
           00000000000000000000
         }
         OnClick = BtnAddRawSaltForCalcClick
-        TabOrder = 32
+        TabOrder = 31
       end
       object BtnRemoveSaltFromCalc: TBitBtn
         Left = 592
-        Height = 32
-        Top = 136
+        Height = 24
+        Top = 121
         Width = 136
         Caption = 'Remove'
         Enabled = False
@@ -23807,12 +23550,12 @@ object Form1: TForm1
         }
         Layout = blGlyphRight
         OnClick = BtnRemoveSaltFromCalcClick
-        TabOrder = 33
+        TabOrder = 32
       end
       object Button29: TBitBtn
         Left = 592
-        Height = 32
-        Top = 176
+        Height = 24
+        Top = 146
         Width = 136
         Caption = 'Add Custom'
         Glyph.Data = {
@@ -23898,12 +23641,12 @@ object Form1: TForm1
           000000000000000000000000000000000000000000000000000000000000
         }
         OnClick = Button29Click
-        TabOrder = 34
+        TabOrder = 33
       end
       object Button30: TBitBtn
         Left = 592
-        Height = 32
-        Top = 216
+        Height = 24
+        Top = 171
         Width = 136
         Caption = 'Delete from DB'
         Enabled = False
@@ -23990,12 +23733,12 @@ object Form1: TForm1
           000000000000000000000000000000000000000000000000000000000000
         }
         OnClick = Button30Click
-        TabOrder = 35
+        TabOrder = 34
       end
       object Button31: TBitBtn
         Left = 592
-        Height = 33
-        Top = 257
+        Height = 24
+        Top = 196
         Width = 136
         Caption = 'Edit Values'
         Enabled = False
@@ -24082,12 +23825,12 @@ object Form1: TForm1
           000000000000000000000000000000000000000000000000000000000000
         }
         OnClick = Button31Click
-        TabOrder = 36
+        TabOrder = 35
       end
       object Button32: TBitBtn
         Left = 592
-        Height = 32
-        Top = 320
+        Height = 24
+        Top = 221
         Width = 136
         Caption = 'Set Weight'
         Glyph.Data = {
@@ -24173,12 +23916,12 @@ object Form1: TForm1
           000000000000000000000000000000000000000000000000000000000000
         }
         OnClick = Button32Click
-        TabOrder = 37
+        TabOrder = 36
       end
       object Button33: TBitBtn
         Left = 592
-        Height = 32
-        Top = 355
+        Height = 24
+        Top = 246
         Width = 136
         Caption = 'Reset Weights'
         Glyph.Data = {
@@ -24265,28 +24008,29 @@ object Form1: TForm1
         }
         OnClick = Button33Click
         ParentFont = False
-        TabOrder = 38
+        TabOrder = 37
       end
       object Memo1: TMemo
-        Left = 328
-        Height = 120
-        Top = 640
-        Width = 400
+        Left = 320
+        Height = 104
+        Top = 488
+        Width = 408
         Font.Color = clRed
         Font.Height = -11
         Font.Name = 'Sans'
         Lines.Strings = (
           'Memo1'
           ''
+          ''
         )
         ParentFont = False
         ScrollBars = ssAutoBoth
-        TabOrder = 39
+        TabOrder = 38
       end
       object Label27: TLabel
-        Left = 328
+        Left = 320
         Height = 21
-        Top = 616
+        Top = 464
         Width = 81
         Caption = 'Message:'
         Font.Height = -18
@@ -24298,34 +24042,34 @@ object Form1: TForm1
         Left = 736
         Height = 24
         Hint = 'Click this button to open up the instrument precision settings dialogue'
-        Top = 640
-        Width = 252
+        Top = 684
+        Width = 272
         Caption = 'Set Instrument Precision Values'
         OnClick = Btn_SetInstrPrecisionClick
-        TabOrder = 40
+        TabOrder = 39
       end
       object Btn_SetWtrQuality: TButton
         Left = 736
         Height = 24
         Hint = 'Click this button to open up the Water Quality parameters dialogue'
-        Top = 609
-        Width = 252
+        Top = 657
+        Width = 272
         Caption = 'Set Water Quality Parameters'
         OnClick = Btn_SetWtrQualityClick
-        TabOrder = 41
+        TabOrder = 40
       end
       object Lbl_Err_NO3: TLabel
-        Left = 272
-        Height = 15
-        Top = 100
+        Left = 234
+        Height = 16
+        Top = 81
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_NH: TLabel
-        Left = 272
-        Height = 15
-        Top = 128
+        Left = 234
+        Height = 16
+        Top = 109
         Width = 8
         Caption = '0'
         ParentColor = False
@@ -24334,45 +24078,45 @@ object Form1: TForm1
         Left = 736
         Height = 24
         Hint = 'Saves the current concentration inputs as a formulations within the database'
-        Top = 516
-        Width = 252
+        Top = 576
+        Width = 272
         Caption = 'Add Formulation to DB'
         OnClick = Btn_SaveFormulaToDBClick
         OnResize = Btn_SaveFormulaToDBResize
-        TabOrder = 42
+        TabOrder = 41
       end
       object Btn_DeleteFormulaFromDB: TButton
         Left = 736
         Height = 24
         Hint = 'Deletes the selected formulation from the database'
-        Top = 547
-        Width = 252
+        Top = 603
+        Width = 272
         Caption = 'Delete Formulation From DB'
         OnClick = Btn_DeleteFormulaFromDBClick
-        TabOrder = 43
+        TabOrder = 42
       end
       object Btn_AddCommFormula: TButton
         Left = 736
         Height = 24
-        Top = 577
-        Width = 252
+        Top = 630
+        Width = 272
         Caption = 'Copy Commercial Nutrient Formulation'
         OnClick = Btn_AddCommFormulaClick
-        TabOrder = 44
+        TabOrder = 43
       end
       object ComboBox1: TComboBox
-        Left = 328
-        Height = 25
+        Left = 320
+        Height = 21
         Top = 40
         Width = 404
         ItemHeight = 0
         OnSelect = ComboBox1Select
         Sorted = True
-        TabOrder = 45
+        TabOrder = 44
         Text = 'Select formulation from DB'
       end
       object Label39: TLabel
-        Left = 256
+        Left = 218
         Height = 31
         Top = 40
         Width = 56
@@ -24382,113 +24126,113 @@ object Form1: TForm1
         ParentFont = False
       end
       object Lbl_Err_P: TLabel
-        Left = 272
-        Height = 15
-        Top = 163
+        Left = 234
+        Height = 16
+        Top = 144
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_B: TLabel
-        Left = 272
-        Height = 15
-        Top = 391
+        Left = 234
+        Height = 16
+        Top = 372
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_Zn: TLabel
-        Left = 272
-        Height = 15
-        Top = 355
+        Left = 234
+        Height = 16
+        Top = 340
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_Fe: TLabel
-        Left = 272
-        Height = 15
-        Top = 327
+        Left = 234
+        Height = 16
+        Top = 308
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_S: TLabel
-        Left = 272
-        Height = 15
-        Top = 296
+        Left = 234
+        Height = 16
+        Top = 277
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_K: TLabel
-        Left = 272
-        Height = 15
-        Top = 196
+        Left = 234
+        Height = 16
+        Top = 179
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_Mg: TLabel
-        Left = 272
-        Height = 15
-        Top = 231
+        Left = 234
+        Height = 16
+        Top = 212
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_Ca: TLabel
-        Left = 272
-        Height = 15
-        Top = 260
+        Left = 234
+        Height = 16
+        Top = 245
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_Cl: TLabel
-        Left = 272
-        Height = 15
-        Top = 586
+        Left = 234
+        Height = 16
+        Top = 567
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_Si: TLabel
-        Left = 272
-        Height = 15
-        Top = 555
+        Left = 234
+        Height = 16
+        Top = 536
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_Na: TLabel
-        Left = 272
-        Height = 15
-        Top = 523
+        Left = 234
+        Height = 16
+        Top = 504
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_Mo: TLabel
-        Left = 272
-        Height = 15
-        Top = 490
+        Left = 234
+        Height = 16
+        Top = 471
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_Cu: TLabel
-        Left = 272
-        Height = 15
-        Top = 462
+        Left = 234
+        Height = 16
+        Top = 443
         Width = 8
         Caption = '0'
         ParentColor = False
       end
       object Lbl_Err_Mn: TLabel
-        Left = 272
-        Height = 15
-        Top = 424
+        Left = 234
+        Height = 16
+        Top = 405
         Width = 8
         Caption = '0'
         ParentColor = False
@@ -24500,45 +24244,47 @@ object Form1: TForm1
         Width = 144
         ClientHeight = 45
         ClientWidth = 144
-        TabOrder = 46
+        TabOrder = 45
         object RadioButton9: TRadioButton
           Left = 72
-          Height = 21
+          Height = 18
           Hint = 'Sets the weight outputs of the program to ounces'
           Top = 24
-          Width = 71
+          Width = 67
           Caption = 'Ounces'
-          Checked = True
           OnChange = RadioButton9Change
           TabOrder = 1
-          TabStop = True
         end
         object RadioButton8: TRadioButton
           Left = 4
-          Height = 21
+          Height = 18
           Hint = 'Sets the weight outputs of the program to grams'
           Top = 24
-          Width = 66
+          Width = 60
           Caption = 'Grams'
+          Checked = True
           OnChange = RadioButton8Change
           TabOrder = 0
+          TabStop = True
         end
         object Label19: TLabel
           Left = 4
-          Height = 15
+          Height = 16
           Top = 8
-          Width = 70
+          Width = 68
           Caption = 'Mass Units'
           ParentColor = False
         end
       end
       object Btn_Calculate: TBitBtn
-        Left = 328
+        Left = 320
         Height = 32
         Hint = 'Press this button to run your calculation !'
-        Top = 345
-        Width = 198
+        Top = 249
+        Width = 256
         Caption = 'Carry Out Calculation'
+        Font.Height = -18
+        Font.Name = 'Lucida Grande'
         Font.Style = [fsBold]
         Glyph.Data = {
           460E0000424D460E00000000000036000000280000001E0000001E0000000100
@@ -24659,13 +24405,13 @@ object Form1: TForm1
         }
         OnClick = Btn_CalculateClick
         ParentFont = False
-        TabOrder = 47
+        TabOrder = 46
       end
       object Lbl_FormulaName: TLabel
         Left = 40
-        Height = 28
+        Height = 32
         Top = 8
-        Width = 276
+        Width = 239
         Caption = 'No Selected Formula'
         Font.Color = clBlue
         Font.Height = -24
@@ -24674,11 +24420,94 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
+      object StringGrid_Result: TStringGrid
+        Left = 320
+        Height = 176
+        Top = 288
+        Width = 408
+        CellHintPriority = chpAll
+        ColCount = 4
+        Columns = <        
+          item
+            ReadOnly = True
+            Title.Caption = 'Substance Name'
+          end        
+          item
+            Alignment = taCenter
+            ReadOnly = True
+            Title.Alignment = taCenter
+            Title.Caption = 'Formula'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'Mass (g)'
+          end        
+          item
+            Alignment = taCenter
+            ReadOnly = True
+            Title.Alignment = taCenter
+            Title.Caption = 'Cost'
+          end>
+        DefaultColWidth = 105
+        DefaultRowHeight = 15
+        DragKind = dkDock
+        FixedCols = 0
+        Font.Height = -10
+        Font.Name = 'Lucida Grande'
+        HeaderHotZones = []
+        HeaderPushZones = []
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goEditing, goSmoothScroll]
+        ParentFont = False
+        RowCount = 1
+        TabOrder = 47
+        TitleFont.Height = -11
+      end
+      object StringGrid_Contribution: TStringGrid
+        Left = 736
+        Height = 277
+        Top = 288
+        Width = 272
+        AutoAdvance = aaNone
+        ColCount = 3
+        Columns = <        
+          item
+            Title.Alignment = taRightJustify
+            Title.Caption = 'Subs. Name'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'Element'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'Contrib.(ppm)'
+          end>
+        Constraints.MaxWidth = 448
+        DefaultColWidth = 90
+        DefaultRowHeight = 18
+        FixedCols = 0
+        RowCount = 1
+        ScrollBars = ssAutoVertical
+        TabOrder = 48
+      end
+      object Label28: TLabel
+        Left = 736
+        Height = 18
+        Top = 264
+        Width = 187
+        Caption = 'Substance Contribution:'
+        Font.Height = -16
+        ParentColor = False
+        ParentFont = False
+      end
     end
     object TabSheet2: TTabSheet
       Caption = 'Results'
-      ClientHeight = 775
-      ClientWidth = 1004
+      ClientHeight = 753
+      ClientWidth = 1010
       Font.Height = -11
       ParentFont = False
       object Label20: TLabel
@@ -24701,7 +24530,7 @@ object Form1: TForm1
         Left = 469
         Height = 13
         Top = 448
-        Width = 110
+        Width = 103
         Caption = 'Predicted EC Value '
         ParentColor = False
       end
@@ -24941,13 +24770,12 @@ object Form1: TForm1
         RowCount = 1
         TabOrder = 6
         TitleFont.Height = -11
-        OnEditingDone = StringGrid2EditingDone
       end
       object Label18: TLabel
         Left = 452
-        Height = 18
+        Height = 20
         Top = 277
-        Width = 81
+        Width = 75
         Caption = 'Total Cost'
         Font.Height = -15
         Font.Name = 'Sans'
@@ -25169,7 +24997,6 @@ object Form1: TForm1
         Title.Text.Strings = (
           'TAChart'
         )
-        ParentColor = False
         object Chart1LineSeries1: TLineSeries
           Title = 'pH'
           LinePen.Color = clLime
@@ -28049,9 +27876,9 @@ object Form1: TForm1
   end
   object LabelVersion: TLabel
     Left = 728
-    Height = 15
+    Height = 16
     Top = 32
-    Width = 20
+    Width = 21
     Caption = '1.5'
     ParentColor = False
     Visible = False
@@ -28074,4 +27901,4 @@ object Form1: TForm1
     left = 800
     top = 24
   end
-end
+end
