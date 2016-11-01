@@ -8,7 +8,6 @@
       <Title Value="HydroBuddy - an Open source nutrient calculator"/>
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
-      <ActiveWindowIndexAtStart Value="0"/>
     </General>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
@@ -44,13 +43,12 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="44">
+    <Units Count="45">
       <Unit0>
         <Filename Value="hydrobuddy.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="1"/>
         <CursorPos X="18" Y="20"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -65,11 +63,11 @@
         <UnitName Value="HB_Main"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="5243"/>
-        <CursorPos X="30" Y="5273"/>
+        <TopLine Value="3614"/>
+        <CursorPos Y="3627"/>
         <UsageCount Value="200"/>
         <Bookmarks Count="2">
-          <Item0 X="34" Y="1092" ID="0"/>
+          <Item0 X="34" Y="1092"/>
           <Item1 X="3" Y="2135" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
@@ -83,7 +81,7 @@
         <WindowIndex Value="1"/>
         <TopLine Value="40"/>
         <CursorPos X="23" Y="60"/>
-        <UsageCount Value="195"/>
+        <UsageCount Value="191"/>
       </Unit2>
       <Unit3>
         <Filename Value="hb_newcustomsalt.pas"/>
@@ -91,10 +89,8 @@
         <ComponentName Value="Form3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_newcustomsalt"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="10"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="1"/>
         <CursorPos X="40" Y="10"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -104,19 +100,19 @@
         <Filename Value="D:\lazarus\lcl\interfaces\win32\win32listsl.inc"/>
         <TopLine Value="158"/>
         <CursorPos Y="172"/>
-        <UsageCount Value="89"/>
+        <UsageCount Value="85"/>
       </Unit4>
       <Unit5>
         <Filename Value="testmtx1.pas"/>
         <TopLine Value="26"/>
         <CursorPos X="24" Y="26"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit5>
       <Unit6>
         <Filename Value="ldlt.pas"/>
         <TopLine Value="51"/>
         <CursorPos X="29" Y="66"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit6>
       <Unit7>
         <Filename Value="densesolver.pas"/>
@@ -129,7 +125,7 @@
         <Filename Value="D:\lazarus\lcl\include\control.inc"/>
         <TopLine Value="2270"/>
         <CursorPos X="74" Y="2283"/>
-        <UsageCount Value="74"/>
+        <UsageCount Value="70"/>
       </Unit8>
       <Unit9>
         <Filename Value="hb_addweight.pas"/>
@@ -137,10 +133,8 @@
         <ComponentName Value="Form4"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_addweight"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="1"/>
         <CursorPos X="58" Y="13"/>
         <UsageCount Value="230"/>
         <Loaded Value="True"/>
@@ -152,8 +146,7 @@
         <ComponentName Value="Form5"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_commercialnutrient"/>
-        <EditorIndex Value="14"/>
+        <EditorIndex Value="15"/>
         <WindowIndex Value="1"/>
         <TopLine Value="354"/>
         <CursorPos X="26" Y="370"/>
@@ -166,11 +159,10 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form6"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_waterquality"/>
-        <EditorIndex Value="16"/>
+        <EditorIndex Value="17"/>
         <WindowIndex Value="1"/>
         <TopLine Value="272"/>
-        <CursorPos X="1" Y="298"/>
+        <CursorPos Y="298"/>
         <UsageCount Value="204"/>
         <Loaded Value="True"/>
       </Unit11>
@@ -179,8 +171,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form7"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_insprecision"/>
-        <EditorIndex Value="18"/>
+        <EditorIndex Value="19"/>
         <WindowIndex Value="1"/>
         <TopLine Value="4"/>
         <CursorPos X="42" Y="25"/>
@@ -192,8 +183,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form8"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_stockanalysis"/>
-        <EditorIndex Value="13"/>
+        <EditorIndex Value="14"/>
         <WindowIndex Value="1"/>
         <TopLine Value="3"/>
         <CursorPos X="45" Y="19"/>
@@ -206,8 +196,7 @@
         <ComponentName Value="Form9"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_persubstance"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="1"/>
         <TopLine Value="5"/>
         <CursorPos X="32" Y="23"/>
@@ -220,11 +209,8 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form10"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_datasetname"/>
-        <EditorIndex Value="0"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="1"/>
-        <CursorPos X="20" Y="1"/>
+        <CursorPos X="20"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit15>
@@ -233,8 +219,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form11"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_analysis"/>
-        <EditorIndex Value="12"/>
+        <EditorIndex Value="13"/>
         <WindowIndex Value="1"/>
         <TopLine Value="4"/>
         <CursorPos X="71" Y="40"/>
@@ -246,12 +231,11 @@
         <UnitName Value="DefineTemplates"/>
         <TopLine Value="1054"/>
         <CursorPos X="9" Y="1071"/>
-        <UsageCount Value="86"/>
+        <UsageCount Value="82"/>
       </Unit17>
       <Unit18>
         <Filename Value="descriptivestatistics.pas"/>
-        <UnitName Value="descriptivestatistics"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="12"/>
         <WindowIndex Value="1"/>
         <TopLine Value="134"/>
         <CursorPos X="24" Y="160"/>
@@ -262,21 +246,20 @@
         <Filename Value="D:\lazarus\lcl\include\customcombobox.inc"/>
         <TopLine Value="181"/>
         <CursorPos Y="214"/>
-        <UsageCount Value="83"/>
+        <UsageCount Value="79"/>
       </Unit19>
       <Unit20>
         <Filename Value="D:\lazarus\lcl\include\buttoncontrol.inc"/>
         <TopLine Value="44"/>
         <CursorPos X="11" Y="51"/>
-        <UsageCount Value="74"/>
+        <UsageCount Value="70"/>
       </Unit20>
       <Unit21>
         <Filename Value="hb_freedom.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form12"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_freedom"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="11"/>
         <WindowIndex Value="1"/>
         <TopLine Value="4"/>
         <CursorPos X="15" Y="30"/>
@@ -293,11 +276,8 @@
       </Unit22>
       <Unit23>
         <Filename Value="pingsend.pas"/>
-        <UnitName Value="pingsend"/>
-        <EditorIndex Value="15"/>
+        <EditorIndex Value="16"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
         <UsageCount Value="100"/>
         <Loaded Value="True"/>
       </Unit23>
@@ -305,15 +285,14 @@
         <Filename Value="D:\lazarus\fpc\2.4.3\source\packages\fcl-db\src\base\db.pas"/>
         <TopLine Value="370"/>
         <CursorPos X="14" Y="389"/>
-        <UsageCount Value="67"/>
+        <UsageCount Value="63"/>
       </Unit24>
       <Unit25>
         <Filename Value="hb_ph.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form13"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_ph"/>
-        <EditorIndex Value="17"/>
+        <EditorIndex Value="18"/>
         <WindowIndex Value="1"/>
         <TopLine Value="50"/>
         <CursorPos X="26" Y="72"/>
@@ -326,11 +305,9 @@
         <ComponentName Value="Form14"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="hb_ratios"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="24"/>
+        <TopLine Value="25"/>
         <CursorPos X="60" Y="28"/>
         <UsageCount Value="229"/>
         <Loaded Value="True"/>
@@ -341,21 +318,21 @@
         <UnitName Value="Grids"/>
         <TopLine Value="8144"/>
         <CursorPos Y="8231"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="14"/>
       </Unit27>
       <Unit28>
         <Filename Value="D:\lazarus\components\tachart\tatypes.pas"/>
         <UnitName Value="TATypes"/>
         <TopLine Value="536"/>
         <CursorPos Y="553"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="11"/>
       </Unit28>
       <Unit29>
         <Filename Value="D:\lazarus\lcl\lclproc.pas"/>
         <UnitName Value="LCLProc"/>
         <TopLine Value="1533"/>
         <CursorPos Y="1544"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit29>
       <Unit30>
         <Filename Value="hb_comparison.pas"/>
@@ -364,16 +341,15 @@
         <ResourceBaseClass Value="Form"/>
         <TopLine Value="24"/>
         <CursorPos X="28" Y="41"/>
-        <UsageCount Value="180"/>
+        <UsageCount Value="222"/>
       </Unit30>
       <Unit31>
         <Filename Value="synaser.pas"/>
-        <UnitName Value="synaser"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="1"/>
         <TopLine Value="916"/>
         <CursorPos X="12" Y="931"/>
-        <UsageCount Value="69"/>
+        <UsageCount Value="90"/>
         <Loaded Value="True"/>
       </Unit31>
       <Unit32>
@@ -381,48 +357,48 @@
         <WindowIndex Value="1"/>
         <TopLine Value="106"/>
         <CursorPos Y="133"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit32>
       <Unit33>
         <Filename Value="..\..\..\..\usr\lib\lazarus\1.2.4\lcl\include\control.inc"/>
         <WindowIndex Value="1"/>
         <TopLine Value="2078"/>
         <CursorPos Y="2100"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit33>
       <Unit34>
         <Filename Value="..\..\..\..\usr\lib\lazarus\1.2.4\lcl\include\buttoncontrol.inc"/>
         <WindowIndex Value="1"/>
         <CursorPos Y="21"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit34>
       <Unit35>
         <Filename Value="..\..\..\..\usr\lib\lazarus\1.2.4\lcl\include\buttons.inc"/>
         <WindowIndex Value="1"/>
         <TopLine Value="146"/>
         <CursorPos Y="170"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit35>
       <Unit36>
         <Filename Value="..\..\..\..\usr\lib\lazarus\1.2.4\lcl\include\bitbtn.inc"/>
         <WindowIndex Value="1"/>
         <TopLine Value="41"/>
         <CursorPos Y="65"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit36>
       <Unit37>
         <Filename Value="..\..\..\..\usr\lib\lazarus\1.2.4\lcl\include\wincontrol.inc"/>
         <WindowIndex Value="1"/>
         <TopLine Value="5304"/>
         <CursorPos Y="5327"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit37>
       <Unit38>
         <Filename Value="..\..\..\..\usr\lib\lazarus\1.2.4\lcl\lclmessageglue.pas"/>
         <UnitName Value="LCLMessageGlue"/>
         <WindowIndex Value="1"/>
         <CursorPos Y="123"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit38>
       <Unit39>
         <Filename Value="..\..\..\..\usr\lib\lazarus\1.2.4\lcl\interfaces\gtk2\gtk2wsstdctrls.pp"/>
@@ -430,26 +406,24 @@
         <WindowIndex Value="1"/>
         <TopLine Value="2412"/>
         <CursorPos Y="2436"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit39>
       <Unit40>
         <Filename Value="hblas.pas"/>
-        <UnitName Value="hblas"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="8"/>
         <WindowIndex Value="1"/>
         <TopLine Value="15"/>
         <CursorPos X="6" Y="30"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit40>
       <Unit41>
         <Filename Value="reflections.pas"/>
-        <UnitName Value="reflections"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="1"/>
         <TopLine Value="214"/>
         <CursorPos X="5" Y="229"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit41>
       <Unit42>
@@ -458,7 +432,7 @@
         <WindowIndex Value="1"/>
         <TopLine Value="7"/>
         <CursorPos X="10" Y="26"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="7"/>
       </Unit42>
       <Unit43>
         <Filename Value="..\..\..\..\Developer\lazarus\lcl\controls.pp"/>
@@ -466,8 +440,19 @@
         <WindowIndex Value="1"/>
         <TopLine Value="19"/>
         <CursorPos X="36" Y="38"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="6"/>
       </Unit43>
+      <Unit44>
+        <Filename Value="..\..\..\..\..\Developer\lazarus\lcl\lclclasses.pp"/>
+        <UnitName Value="LCLClasses"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="12"/>
+        <CursorPos X="10" Y="26"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+      </Unit44>
     </Units>
     <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
@@ -487,104 +472,103 @@
         <Caret Line="2133" Column="3" TopLine="2115"/>
       </Position4>
       <Position5>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="2799" Column="18" TopLine="2937"/>
-      </Position5>
-      <Position6>
-        <Filename Value="hb_addweight.pas"/>
-        <Caret Line="6" Column="58" TopLine="16"/>
-      </Position6>
-      <Position7>
         <Filename Value="hb_addweight.pas"/>
         <Caret Line="56" Column="38" TopLine="34"/>
-      </Position7>
-      <Position8>
+      </Position5>
+      <Position6>
         <Filename Value="hb_main.pas"/>
         <Caret Line="5278" Column="13" TopLine="13"/>
+      </Position6>
+      <Position7>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="5275" TopLine="5267"/>
+      </Position7>
+      <Position8>
+        <Filename Value="hb_addweight.pas"/>
+        <Caret Column="18"/>
       </Position8>
       <Position9>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="5275" Column="1" TopLine="5267"/>
+        <Caret Line="5275" TopLine="5264"/>
       </Position9>
       <Position10>
-        <Filename Value="hb_addweight.pas"/>
-        <Caret Line="1" Column="18" TopLine="1"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="5267" Column="28" TopLine="5255"/>
       </Position10>
       <Position11>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="5275" Column="1" TopLine="5264"/>
+        <Caret Line="5314" Column="5" TopLine="5309"/>
       </Position11>
       <Position12>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="5266" Column="1" TopLine="5273"/>
+        <Caret Line="318" TopLine="308"/>
       </Position12>
       <Position13>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="5267" Column="28" TopLine="5255"/>
+        <Filename Value="hb_addweight.pas"/>
+        <Caret Column="18"/>
       </Position13>
       <Position14>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="5314" Column="5" TopLine="5309"/>
+        <Caret Line="5277" Column="16" TopLine="5257"/>
       </Position14>
       <Position15>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="318" Column="1" TopLine="308"/>
+        <Caret Line="5269" Column="3" TopLine="5258"/>
       </Position15>
       <Position16>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="312" Column="1" TopLine="5149"/>
+        <Caret Line="5273" Column="36" TopLine="5258"/>
       </Position16>
       <Position17>
-        <Filename Value="hb_addweight.pas"/>
-        <Caret Line="1" Column="18" TopLine="1"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="276" Column="23" TopLine="259"/>
       </Position17>
       <Position18>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="5277" Column="16" TopLine="5257"/>
+        <Caret Line="5273" Column="36" TopLine="5254"/>
       </Position18>
       <Position19>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="5269" Column="3" TopLine="5258"/>
+        <Caret Line="276" Column="33" TopLine="259"/>
       </Position19>
       <Position20>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="5273" Column="36" TopLine="5258"/>
+        <Caret Line="5251" Column="86" TopLine="5243"/>
       </Position20>
       <Position21>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="276" Column="23" TopLine="259"/>
       </Position21>
       <Position22>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="5273" Column="36" TopLine="5254"/>
+        <Caret Line="158" Column="17" TopLine="129"/>
       </Position22>
       <Position23>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="276" Column="33" TopLine="259"/>
+        <Caret Line="276" Column="27" TopLine="247"/>
       </Position23>
       <Position24>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="5251" Column="86" TopLine="5243"/>
+        <Caret Line="983" Column="18" TopLine="954"/>
       </Position24>
       <Position25>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Caret Line="2218" Column="18" TopLine="2189"/>
       </Position25>
       <Position26>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="158" Column="17" TopLine="129"/>
+        <Filename Value="hb_ratios.pas"/>
+        <Caret Line="28" Column="60" TopLine="25"/>
       </Position26>
       <Position27>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="276" Column="27" TopLine="247"/>
+        <Caret Line="5275" TopLine="5261"/>
       </Position27>
       <Position28>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="983" Column="18" TopLine="954"/>
+        <Caret Line="3592" TopLine="3566"/>
       </Position28>
       <Position29>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2218" Column="18" TopLine="2189"/>
+        <Caret Line="3627" TopLine="3614"/>
       </Position29>
     </JumpHistory>
   </ProjectOptions>
@@ -606,12 +590,9 @@
         </Win32>
       </Options>
     </Linking>
-    <Other>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
   </CompilerOptions>
   <Debugging>
-    <BreakPoints Count="12">
+    <BreakPoints Count="8">
       <Item1>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
@@ -652,50 +633,22 @@
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="3580"/>
+        <Line Value="3540"/>
       </Item6>
       <Item7>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="3540"/>
+        <Line Value="857"/>
       </Item7>
       <Item8>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="hb_main.pas"/>
-        <Line Value="857"/>
-      </Item8>
-      <Item9>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="hb_main.pas"/>
-        <Line Value="3592"/>
-      </Item9>
-      <Item10>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="hb_main.pas"/>
-        <Line Value="3627"/>
-      </Item10>
-      <Item11>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="hb_main.pas"/>
         <Line Value="470"/>
-      </Item11>
-      <Item12>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="hb_main.pas"/>
-        <Line Value="5275"/>
-      </Item12>
+      </Item8>
     </BreakPoints>
     <Watches Count="3">
       <Item1>
@@ -720,5 +673,4 @@
       </Item3>
     </Exceptions>
   </Debugging>
-  <EditorMacros Count="0"/>
-</CONFIG>
+</CONFIG>
