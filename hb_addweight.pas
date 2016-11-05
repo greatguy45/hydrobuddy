@@ -10,11 +10,12 @@ uses
 
 type
 
-  { TForm4 }
+  { TForm_SetWeight }
 
-  TForm4 = class(TForm)
+  TForm_SetWeight = class(TForm)
     Button1: TButton;
     Edit1: TEdit;
+    Label_Unit: TLabel;
     Lbl_MassOption: TLabel;
     Label2: TLabel;
     procedure Button1Click(Sender: TObject);
@@ -25,13 +26,13 @@ type
   end; 
 
 var
-  Form4: TForm4; 
+  Form_SetWeight: TForm_SetWeight;
 
 implementation
 
-{ TForm4 }
+{ TForm_SetWeight }
 
-procedure TForm4.Button1Click(Sender: TObject);
+procedure TForm_SetWeight.Button1Click(Sender: TObject);
 var
 MyDbf: TDbf;
 begin
@@ -57,7 +58,7 @@ MyDbf.Close ;
 
 MyDbf.Free ;
 
-Form4.Visible := False ;
+Form_SetWeight.Visible := False ;
 
 
 

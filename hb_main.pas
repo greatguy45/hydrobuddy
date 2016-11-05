@@ -110,7 +110,6 @@ type
     Label25: TLabel;
     Label26: TLabel;
     Label27: TLabel;
-    Lbl_FormulaName: TLabel;
     Lbl_Err_NO3: TLabel;
     Label29:    TLabel;
     Label30:    TLabel;
@@ -272,9 +271,9 @@ type
     procedure RadioButton5Change(Sender: TObject);
     procedure RadBtn_ABSolutionChange(Sender: TObject);
     procedure RadBtn_DirectAdditionChange(Sender: TObject);
+    procedure BtnRemoveSaltFromCalcClick(Sender: TObject);
     procedure RadioButton8Change(Sender: TObject);
     procedure RadioButton9Change(Sender: TObject);
-    procedure BtnRemoveSaltFromCalcClick(Sender: TObject);
     procedure StringGrid3SelectCell(Sender: TObject; aCol, aRow: Integer;
       var CanSelect: Boolean);
     procedure StringGrid_ResultEditingDone(Sender: TObject);
@@ -3696,22 +3695,24 @@ begin
     MyDbf.Filtered := true;       // This selects the filtered set
     MyDbf.First;                  // moves the the first filtered data
 
-    hb_addweight.Form4.Edit1.text := MyDbf.FieldByName('Weight').AsString;
+    hb_addweight.Form_SetWeight.Edit1.text := MyDbf.FieldByName('Weight').AsString;
 
     MyDbf.Close ;
 
     MyDbf.Free ;
 
 
-hb_addweight.Form4.Label2.Caption := ListBox2.Items[selected_item] ;
-
-hb_addweight.Form4.Visible := True ;
+hb_addweight.Form_SetWeight.Label2.Caption := ListBox2.Items[selected_item] ;
+if RadioButton8.Checked then
+hb_addweight.Form_SetWeight.Label_Unit.Caption := RadioButton8.Caption;
+if RadioButton9.Checked then
+hb_addweight.Form_SetWeight.Label_Unit.Caption := RadioButton9.Caption;
+hb_addweight.Form_SetWeight.Visible := True ;
 
 end;
 
 procedure TForm1.Button33Click(Sender: TObject);
 var
-i : integer ;
 selected_item : integer ;
 MyDbf: TDbf;
 begin
@@ -4440,7 +4441,6 @@ end;
 procedure TForm1.Btn_DeleteFormulaFromDBClick(Sender: TObject);
 var
   MyDbf: TDbf;
-  i:     integer;
   selected_item: integer;
 begin
 
@@ -4656,7 +4656,7 @@ begin
   if Units = 'mN' then
   RadioButton13.Checked := true ;
 
-  Lbl_FormulaName.Caption := MyDbf.FieldByName('Name').AsString;
+  //Lbl_FormulaName.Caption := MyDbf.FieldByName('Name').AsString;
   Edit1.Text  := MyDbf.FieldByName('N (NO3-)').AsString;
   Edit3.Text  := MyDbf.FieldByName('P').AsString;
   Edit2.Text  := MyDbf.FieldByName('K').AsString;
@@ -5263,19 +5263,19 @@ begin
 
 end;
 
-procedure TForm1.RadioButton8Change(Sender: TObject);
+{procedure TForm1.RadioButton8Change(Sender: TObject);
 begin
   StringGrid_Result.Cells[2,0]  := 'Mass (g)';
-  hb_addweight.Form4.Lbl_MassOption.Caption := 'Mass of Substance Used (g)';
+  //Label_Unit.Caption := 'gram';
   cleanresults;
 end;
 
 procedure TForm1.RadioButton9Change(Sender: TObject);
 begin
-  hb_addweight.Form4.Lbl_MassOption.Caption := 'Mass of Substance Used (oz)';
+  //Form_SetWeight.Label_Unit.Caption := 'oz';
   StringGrid_Result.Cells[2,0]  := 'Mass (oz)';
   cleanresults;
-end;
+end;}
 
 procedure TForm1.BtnRemoveSaltFromCalcClick(Sender: TObject);
 var
@@ -5318,6 +5318,20 @@ MyDbf.Free ;
 ListBox2.Items.Delete(selected_item);
 
 
+end;
+
+procedure TForm1.RadioButton8Change(Sender: TObject);
+begin
+  //StringGrid_Result.Cells[2,0]  := 'Mass (g)';
+  Form_SetWeight.Label_Unit.Caption := 'gram';
+  cleanresults;
+end;
+
+procedure TForm1.RadioButton9Change(Sender: TObject);
+begin
+  //Form_SetWeight.Label_Unit.Caption := 'oz';
+  StringGrid_Result.Cells[2,0]  := 'Mass (oz)';
+  cleanresults;
 end;
 
 procedure TForm1.StringGrid3SelectCell(Sender: TObject; aCol, aRow: Integer;

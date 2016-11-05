@@ -46,8 +46,6 @@ end;
 
 procedure TForm14.Button1Click(Sender: TObject);
 var
-i : integer ;
-j : integer ;
 names : array[0..2] of string ;
 begin
 
